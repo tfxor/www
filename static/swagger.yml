@@ -1,0 +1,888 @@
+swagger: '2.0'
+info:
+  version: '2018-08-28T15:19:00Z'
+  title: TerraHub API Docs
+  description: Managed by TerraHub
+host: api.terrahub.io
+basePath: /v1
+schemes:
+  - https
+tags:
+  - name: aws
+    description: AWS Management
+  - name: bitbucket
+    description: Bitbucket Management
+  - name: github
+    description: Github Management
+  - name: stripe
+    description: Payment Management
+  - name: thub
+    description: TerraHub Management
+paths:
+  /aws/job/create:
+    post:
+      summary: Create new CodePipeline job associated to specific CodePipeline project
+      tags:
+        - aws
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': &ref_0
+          description: 200 response
+          schema:
+            title: Response Schema
+            type: object
+            properties:
+              message:
+                type: string
+              data:
+                type: object
+          headers:
+            Access-Control-Expose-Headers:
+              type: string
+            Access-Control-Allow-Origin:
+              type: string
+            x-amzn-original-RequestId:
+              type: string
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /aws/project/create:
+    post:
+      summary: Create new CodePipeline project
+      tags:
+        - aws
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /github/auth/create:
+    get:
+      summary: Authenticate with GitHub and link with TerraHub account
+      tags:
+        - github
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '301':
+          description: 301 response
+          headers:
+            Location:
+              type: string
+            Access-Control-Expose-Headers:
+              type: string
+            Access-Control-Allow-Origin:
+              type: string
+            x-amzn-original-RequestId:
+              type: string
+  /github/repo/sync:
+    get:
+      summary: Synchronize user's GitHub repositories
+      tags:
+        - github
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /github/repo/retrieve:
+    get:
+      summary: ''
+      tags:
+        - github
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /github/repo/update:
+    post:
+      summary: Update GitHub repository data
+      tags:
+        - github
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /github/token/retrieve:
+    get:
+      summary: Retrieve user GitHub token
+      tags:
+        - github
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /github/webhook/listen:
+    post:
+      summary: CI execution callback lambda
+      tags:
+        - github
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /github/webhook/trigger:
+    post:
+      summary: Trigger webhook URL with event payload
+      tags:
+        - github
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /stripe/customer/create:
+    post:
+      summary: Create payment customer
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /stripe/customer/retrieve:
+    get:
+      summary: Retrieve customer payment info
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /stripe/customer/update:
+    post:
+      summary: Update customer payment info
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /stripe/invoice/list:
+    get:
+      summary: Retrieve list of invoices for a specific customer
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /stripe/plan/list:
+    get:
+      summary: Retrieve list of active plans
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /stripe/source/create:
+    post:
+      summary: Create payment source
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /stripe/source/delete:
+    post:
+      summary: Detach payment source
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /stripe/subscription/create:
+    post:
+      summary: Subscribe customer to a plan
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /stripe/subscription/update:
+    post:
+      summary: Update customer subscription
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /stripe/subscription/delete:
+    post:
+      summary: Unsubscribe customer from plan
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /stripe/webhook/trigger:
+    post:
+      summary: Trigger webhook URL with event payload
+      tags:
+        - stripe
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/account/retrieve:
+    get:
+      summary: Retrieve TerraHub account information
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/mailchimp/subscribe:
+    get:
+      summary: Subscribe to MailChimp
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+  /thub/project/create:
+    post:
+      summary: Create terrahub project if not exists
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/project/validate:
+    get:
+      summary: Validate terrahub project by hash
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/account/update:
+    post:
+      summary: Update TerraHub account information
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/listing/count:
+    get:
+      summary: Retrieve realtime counts
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/listing/list:
+    get:
+      summary: Retrieve resource listing list
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/listing/retrieve:
+    get:
+      summary: Retrieve listing records
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/cloud-account/create:
+    post:
+      summary: ''
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/cloud-account/delete:
+    post:
+      summary: ''
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/cloud-account/retrieve:
+    get:
+      summary: ''
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/cloud-account/update:
+    post:
+      summary: ''
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/continuous-delivery/create:
+    post:
+      summary: ''
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/continuous-delivery/delete:
+    post:
+      summary: ''
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/continuous-delivery/retrieve:
+    get:
+      summary: ''
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/continuous-delivery/update:
+    post:
+      summary: ''
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/realtime/count:
+    get:
+      summary: Retrieve realtime counts
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/realtime/create:
+    post:
+      summary: Create realtime record
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/realtime/list:
+    get:
+      summary: Retrieve realtime resource list
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/realtime/retrieve:
+    get:
+      summary: Retrieve realtime records
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/resource/parse-plan:
+    post:
+      summary: Parse and normalize .tfplan file
+      tags:
+        - thub
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/resource/parse-apply:
+    post:
+      summary: Parse and normalize .tfstate file for apply action
+      tags:
+        - thub
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/resource/parse-destroy:
+    post:
+      summary: Parse and normalize .tfstate file for destroy action
+      tags:
+        - thub
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/token/create:
+    post:
+      summary: Create new TerraHub token
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/token/refresh:
+    post:
+      summary: Refresh TerraHub token
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/token/retrieve:
+    get:
+      summary: Retrieve TerraHub token
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+  /thub/user/confirm:
+    post:
+      summary: Confirm new user associated with TerraHub account
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/user/create:
+    post:
+      summary: Create new user associated with TerraHub account
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      parameters:
+        - in: body
+          name: Empty
+          required: true
+          schema:
+            type: object
+            title: Empty Schema
+  /thub/variables/retrieve:
+    get:
+      summary: Retrieve envirionment variables of repositories
+      tags:
+        - thub
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200': *ref_0
+      security:
+        - DeepMasterApiGatewayAuthorizer31b5fa10: []
+securityDefinitions:
+  DeepMasterApiGatewayAuthorizer31b5fa10:
+    type: apiKey
+    name: Authorization
+    in: header
+    x-amazon-apigateway-authtype: custom
+    x-amazon-apigateway-authorizer:
+      authorizerCredentials: 'arn:aws:iam::123456789012:role/DeepMasterApiExecAccess31b5fa10'
+      authorizerUri: >-
+        arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:123456789012:function:DeepMasterLambdaAuthorizer31b5fa10/invocations
+      authorizerResultTtlInSeconds: 0
+      identityValidationExpression: .*
+      type: token
