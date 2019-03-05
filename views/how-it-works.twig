@@ -1,0 +1,165 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/how-it-works.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="mob-hidden">
+        <div class="container">
+            <div class="bread-block">
+                <div class="breadcrumbs">
+                    <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/how-it-works/" itemprop="item">
+                                <span itemprop="name">How It Works</span>
+                                <meta itemprop="position" content="2" />
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/" itemprop="item">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <meta itemprop="position" content="1" />
+                            </a>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="media-block">
+                    <span>Social Media</span>
+                    <a href="https://www.facebook.com/terrahubcorp" alt="TerraHub on Facebook" target="_blank" rel="noreferrer" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.twitter.com/terrahubcorp" alt="TerraHub on Twitter" target="_blank" rel="noreferrer" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/terrahubcorp" alt="TerraHub on LinkedIn" target="_blank" rel="noreferrer" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <hr class="line-gray">
+        </div>
+
+        <div class="how-it-works" itemscope itemtype="http://schema.org/HowTo">
+            <div class="container">
+                <div class="space-up-down center">
+                    <h1 class="main-title" itemprop="name">How It Works?</h1>
+                    <p class="title-text-mid center-block" itemprop="description">TerraHub engages shared responsibility model: customers are responsible for terraform configuration and cloud security, while our platform offers managed services and undifferentiated heavy lifting like automated workflows and continuous delivery.</p>
+                    <ul class="bullets">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="light-block">
+                <div class="container info-block">
+                    <div class="work-bg space-left-right">
+                        <div class="flex-row display-grid">
+                            <div class="flex-item-6 flex-column space-btn">
+                                <p class="text-bold-small" itemprop="name">Step 1</p>
+                                <h4 class="text-slab" itemprop="text">Develop Terraform Configurations and Commit into
+                                    Code Repository</h4>
+                                <p itemprop="text">TerraHub has built and open sourced TerraHub CLI, a command line
+                                    interface that helps create and execute terraform configuration, as well as list
+                                    cloud resources managed by terraform. It can be used as a stand alone tool or work
+                                    as an integrated component of TerraHub platform. Follow below link for more.</p>
+                                <div>
+                                    <a href="https://www.npmjs.com/package/terrahub" class="btn-dark-blue btn"
+                                        alt="TerraHub on NPM" target="_blank" rel="noreferrer">TerraHub CLI</a>
+                                </div>
+                                <div class="cloud-info arrow responsive-arrow">
+                                    <img src="{{ asset('@img/icons/arrow.svg') }}" class="arrow-up" alt="Next Step"/>
+                                </div>
+                            </div>
+                            <div class="flex-item-6 mob-svg hidden display-grid">
+                                <div class="info">
+                                    <img src="{{ asset('@img/illustration/step1.svg') }}" itemprop="image" alt="Develop Terraform Configurations and Commit into Code Repository" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-row display-grid">
+                            <div class="flex-item-6 flex-column space-btn">
+                                <p class="text-bold-small" itemprop="name">Step 2</p>
+                                <h4 class="text-slab" itemprop="text">TerraHub Integration Will Be Triggered on Code
+                                    Commit or Pull Request</h4>
+                                <p itemprop="text">TerraHub has built and integrated with several code management
+                                    services like GitHub and GitLab, in order to simplify customers' cloud resources
+                                    management. These integrations are powered by TerraHub API.
+                                    Follow below link for more.
+                                </p>
+                                <div>
+                                    <a href="https://www.terrahub.io/api/" class="btn-dark-blue btn">TerraHub API</a>
+                                </div>
+                                <div class="cloud-info arrow responsive-arrow">
+                                    <img src="{{ asset('@img/icons/arrow.svg') }}" alt="Next Step"/>
+                                </div>
+                            </div>
+                            <div class="flex-item-6 mob-svg hidden">
+                                <div class="info">
+                                    <img src="{{ asset('@img/illustration/step2.svg') }}" itemprop="image" alt="TerraHub Integration Will Be Triggered on Code Pull Request" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container info-blocks">
+                    <div class="carousel-info">
+                        <div class="flex-row carousel-schema">
+                            <div class="cloud-info flex-item-4">
+                                <div class="flex-column">
+                                    <img src="{{ asset('@img/illustration/ill-1.svg') }}" class="img-cloud" alt="Amazon Web Services" />
+                                    <p class="title-slab">Amazon Web Services</p>
+                                    <span>Amazon Web Services (AWS) provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis</span>
+                                    <div class="cloud-info arrow">
+                                        <img src="{{ asset('@img/icons/arrow.svg') }}" alt="Next Step" />
+                                    </div>
+                                </div>
+
+                                <div class="cloud-info">
+                                    <img src="{{ asset('@img/illustration/ill-4.svg') }}" class="img-cloud" alt="Amazon AWS CodePipeline" />
+                                    <p class="title-slab">CodePipeline</p>
+                                    <span>CodePipeline automates the software deployment process, allowing a developer to quickly model, visualize and deliver code for new features and updates</span>
+                                </div>
+                            </div>
+                            <div class="cloud-info flex-item-4">
+                                <div class="flex-column">
+                                    <img src="{{ asset('@img/illustration/ill-2.svg') }}" class="img-cloud" alt="Google Cloud Platform" />
+                                    <p class="title-slab">Google Cloud Platform</p>
+                                    <span>Google Cloud Platform is a suite of cloud computing services that runs on the same infrastructure used internally for YouTube and Google Search</span>
+                                    <div class="cloud-info arrow">
+                                        <img src="{{ asset('@img/icons/arrow.svg') }}" alt="Next Step" />
+                                    </div>
+                                </div>
+
+                                <div class="cloud-info">
+                                    <img src="{{ asset('@img/illustration/ill-5.svg') }}" class="img-cloud" alt="Google Cloud Container Builder" />
+                                    <p class="title-slab">Container Builder</p>
+                                    <span>Container Builder can import source code, execute a build to your specifications, and produce artifacts such as Docker containers or Java archives</span>
+                                </div>
+                            </div>
+                            <div class="cloud-info flex-item-4">
+                                <div class="flex-column">
+                                    <img src="{{ asset('@img/illustration/ill-3.svg') }}" class="img-cloud" alt="Microsoft Azure" />
+                                    <p class="title-slab">Microsoft Azure</p>
+                                    <span>Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services</span>
+                                    <div class="cloud-info arrow">
+                                        <img src="{{ asset('@img/icons/arrow.svg') }}" alt="Next Step" />
+                                    </div>
+                                </div>
+
+                                <div class="cloud-info">
+                                    <img src="{{ asset('@img/illustration/ill-6.svg') }}" class="img-cloud" alt="Microsoft Azure App Service" />
+                                    <p class="title-slab">App Service</p>
+                                    <span>App Service is an integrated service that quickly builds, deploys, and scales enterprise-grade web, mobile, and API apps running on any platform</span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="{{ asset('@img/icons/arrow-bottom.svg') }}" class="arrow-bottom" alt="Company Illustration" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/how-it-works.min.js') }}"></script>
+{% endblock %}

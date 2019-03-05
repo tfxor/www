@@ -1,0 +1,537 @@
+{
+  "$": {
+    "common-js": [
+      "js/libs/jquery.min.js",
+      "js/libs/jquery-mailchimp.min.js",
+      "js/libs/jquery-popup.min.js",
+      "js/libs/slick-1.6.0.min.js",
+      "js/libs/session.min.js",
+      "js/main.js",
+      "js/ga.js",
+      "js/mailchimp.js"
+    ],
+    "common-scss": [
+      "styles/base.scss",
+      "styles/main.scss",
+      "styles/libs/font-awesome.min.css",
+      "styles/libs/materialdesignicons.min.css",
+      "styles/libs/slick-1.6.0.min.css",
+      "styles/libs/slick-theme-1.6.0.min.css"
+    ]
+  },
+  "routes": {
+    "/": {
+      "view": "index.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/",
+        "title": "TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/index.min.js": [
+          "$.common-js"
+        ],
+        "css/index.min.css": [
+          "$.common-scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/error/": {
+      "view": "error.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/error/",
+        "title": "404 Page Not Found | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/error.min.js": [
+          "$.common-js"
+        ],
+        "css/error.min.css": [
+          "$.common-scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/privacy-policy/": {
+      "view": "privacy-policy.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/privacy-policy/",
+        "title": "Privacy Policy | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/privacy-policy.min.js": [
+          "$.common-js"
+        ],
+        "css/privacy-policy.min.css": [
+          "$.common-scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/terms-conditions/": {
+      "view": "terms-conditions.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/terms-conditions/",
+        "title": "Terms &amp; Conditions | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/terms-conditions.min.js": [
+          "$.common-js"
+        ],
+        "css/terms-conditions.min.css": [
+          "$.common-scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/what-we-do/": {
+      "view": "what-we-do.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/what-we-do/",
+        "title": "What We Do | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/what-we-do.min.js": [
+          "$.common-js"
+        ],
+        "css/what-we-do.min.css": [
+          "$.common-scss",
+          "styles/page-about.scss",
+          "styles/what-we-do.scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/how-it-works/": {
+      "view": "how-it-works.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/how-it-works/",
+        "title": "How It Works | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/how-it-works.min.js": [
+          "$.common-js",
+          "js/carousel.js"
+        ],
+        "css/how-it-works.min.css": [
+          "$.common-scss",
+          "styles/how-it-works.scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/plans-pricing/": {
+      "view": "plans-pricing.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/plans-pricing/",
+        "title": "Plans &amp; Pricing | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/plans-pricing.min.js": [
+          "$.common-js",
+          "js/carousel.js"
+        ],
+        "css/plans-pricing.min.css": [
+          "$.common-scss",
+          "styles/plans.scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/contact-us/": {
+      "view": "contact-us.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/contact-us/",
+        "title": "Contact Us | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/contact-us.min.js": [
+          "$.common-js"
+        ],
+        "css/contact-us.min.css": [
+          "$.common-scss",
+          "styles/contact.scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/contact-successful/": {
+      "view": "contact-successful.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/contact-successful/",
+        "title": "Contact Confirmation | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/contact-successful.min.js": [
+          "$.common-js",
+          "js/confirmation.js"
+        ],
+        "css/contact-successful.min.css": [
+          "$.common-scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/about-us/": {
+      "view": "about.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/about-us/",
+        "title": "About Us | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/page-about.min.js": [
+          "$.common-js"
+        ],
+        "css/page-about.min.css": [
+          "$.common-scss",
+          "styles/page-about.scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/api/": {
+      "view": "api.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/api/",
+        "title": "API | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/page-api.min.js": [
+          "$.common-js",
+          "js/api-docs.js",
+          "js/libs/swagger-ui-bundle.min.js"
+        ],
+        "css/page-api.min.css": [
+          "$.common-scss",
+          "styles/page-api.scss",
+          "styles/libs/swagger-ui.min.css",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/docs/": {
+      "view": "docs.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/docs/",
+        "title": "Docs | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      },
+      "assets": {
+        "js/page-docs.min.js": [
+          "$.common-js",
+          "js/libs/flatdoc-0.9.0.min.js",
+          "js/user-guide.js",
+          "js//libs/flatdoc.min.js"
+        ],
+        "css/page-docs.min.css": [
+          "$.common-scss",
+          "styles/user-guide.scss",
+          "styles/responsive-docs.scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/blog/": {
+      "view": "blog-list.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/blog/",
+        "image": "https://www.terrahub.io/img/blog/2018-08-12/dashboard.png",
+        "title": "Our Blog | TerraHub",
+        "description": "TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-04-01T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "website",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image",
+        "blogs": [
+          {
+            "featured": 0,
+            "date": "October 19th, 2018",
+            "image": "https://www.terrahub.io/img/blog/2018-10-19/build-code-containers-python.png",
+            "href": "https://www.terrahub.io/blog/terraform-for-serverless-series-enhanced-management-of-aws-fargate-tasks/",
+            "title": "Terraform for Serverless Series: Enhanced Management of AWS Fargate Tasks",
+            "description": "According to official website AWS Fargate is a compute engine for Amazon ECS that allows you to run containers without having to manage servers or clusters. In this article I will provide some magic around how to build terraform configurations that provision and deploy serverless containers."
+          },
+          {
+            "featured": 0,
+            "date": "September 28th, 2018",
+            "image": "https://www.terrahub.io/img/blog/2018-09-28/build-code-terraform-bash.png",
+            "href": "https://www.terrahub.io/blog/terraform-for-serverless-series-enhanced-management-of-amazon-s3-websites/",
+            "title": "Terraform for Serverless Series: Enhanced Management of Amazon S3 Websites",
+            "description": "Last week I started working on a new series of stories focused on terraform for serverless. Today I would like to double down on this approach and describe in details how our team provisions and deploys Amazon S3 with website hosting feature for static web pages or single page applications."
+          },
+          {
+            "featured": 1,
+            "date": "September 19th, 2018",
+            "image": "https://www.terrahub.io/img/blog/2018-09-19/build-code-nodejs-javascript.png",
+            "href": "https://www.terrahub.io/blog/terraform-for-serverless-series-enhanced-management-of-aws-lambda-functions/",
+            "title": "Terraform for Serverless Series: Enhanced Management of AWS Lambda Functions",
+            "description": "I quickly became fascinated by terraform's simplicity and ease of use. As an engineer, you can tell when a tool just works"
+          },
+          {
+            "featured": 0,
+            "date": "September 10th, 2018",
+            "image": "https://www.terrahub.io/img/blog/2018-09-10/serverless_computing.png",
+            "href": "https://www.terrahub.io/blog/terrahub-io-serverless-computing-london/",
+            "title": "TerraHub.io - Serverless Computing London: Time To Make Terraform Serverless Friendly",
+            "description": "I would like to invite you to argue with me (or against me) that it is time to make terraform serverless friendly"
+          },
+          {
+            "featured": 0,
+            "date": "September 4th, 2018",
+            "image": "https://www.terrahub.io/img/blog/2018-09-04/terrahub-cli.png",
+            "href": "https://www.terrahub.io/blog/terrahub-cli-is-open-source-and-free-forever/",
+            "title": "TerraHub CLI is Open Source and Free Forever",
+            "description": "TerraHub is a terraform centric devops tool that simplifies provisioning and management at scale of cloud resources and cloud services across multiple cloud accounts"
+          },
+          {
+            "featured": 3,
+            "date": "August 27th, 2018",
+            "image": "https://www.terrahub.io/img/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png",
+            "href": "https://www.terrahub.io/blog/terrahub-io-serverless-architecture-in-action/",
+            "title": "TerraHub.io Serverless Architecture in Action",
+            "description": "When we started working on TerraHub CLI, our initial goal was to automate terraform execution and allow customer to trigger runs in self-service mode, as part of their existing GitHub and Jenkins pipelines"
+          },
+          {
+            "featured": 2,
+            "date": "August 12th, 2018",
+            "image": "https://www.terrahub.io/img/blog/2018-08-12/dashboard.png",
+            "href": "https://www.terrahub.io/blog/introducing-terrahub-io-devops-hub-for-terraform/",
+            "title": "Introducing TerraHub.io — DevOps Hub for Terraform",
+            "description": "Over the last couple of months we have been working with several customers to reduce the development burden of terraform configuration and simplify the operational complexity of terraform automated workflows"
+          }
+        ]
+      },
+      "assets": {
+        "js/blog.min.js": [
+          "$.common-js",
+          "js/libs/highlight.pack.min.js",
+          "js/blog.js"
+        ],
+        "css/blog.min.css": [
+          "$.common-scss",
+          "styles/libs/github.min.css",
+          "styles/blog.scss",
+          "styles/post.scss",
+          "styles/responsive.scss"
+        ]
+      }
+    },
+    "/blog/introducing-terrahub-io-devops-hub-for-terraform/": {
+      "view": "blog-post/introducing-terrahub-io-devops-hub-for-terraform.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/blog/introducing-terrahub-io-devops-hub-for-terraform/",
+        "image": "https://www.terrahub.io/img/blog/2018-08-12/dashboard.png",
+        "title": "Introducing TerraHub.io — DevOps Hub for Terraform",
+        "description": "Aug 12th, 2018 | 4 min read | Over the last couple of months we have been working with several customers to reduce the development burden of terraform configuration and simplify the operational complexity of terraform automated workflows",
+        "read_time": "4 min read",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-08-12T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "tb_type": "article",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      }
+    },
+    "/blog/terrahub-io-serverless-architecture-in-action/": {
+      "view": "blog-post/terrahub-io-serverless-architecture-in-action.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/blog/terrahub-io-serverless-architecture-in-action/",
+        "image": "https://www.terrahub.io/img/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png",
+        "title": "TerraHub.io Serverless Architecture in Action",
+        "description": "Aug 27th, 2018 | 5 min read | When we started working on TerraHub CLI, our initial goal was to automate terraform execution and allow customer to trigger runs in self-service mode, as part of their existing GitHub and Jenkins pipelines",
+        "read_time": "5 min read",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-08-27T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "tb_type": "article",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      }
+    },
+    "/blog/terrahub-cli-is-open-source-and-free-forever/": {
+      "view": "blog-post/terrahub-cli-is-open-source-and-free-forever.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/blog/terrahub-cli-is-open-source-and-free-forever/",
+        "image": "https://www.terrahub.io/img/blog/2018-09-04/terrahub-cli.png",
+        "title": "TerraHub CLI is Open Source and Free Forever",
+        "description": "Sep 4th, 2018 | 3 min read | TerraHub is a terraform centric devops tool that simplifies provisioning and management at scale of cloud resources and cloud services...",
+        "read_time": "3 min read",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-09-04T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "tb_type": "article",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      }
+    },
+    "/blog/terrahub-io-serverless-computing-london/": {
+      "view": "blog-post/terrahub-io-serverless-computing-london.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/blog/terrahub-io-serverless-computing-london/",
+        "image": "https://www.terrahub.io/img/blog/2018-09-10/serverless_computing.png",
+        "title": "TerraHub.io @ Serverless Computing London: Time To Make Terraform Serverless Friendly",
+        "description": "Sep 10th, 2018 | 4 min read | In two months, I will be joining my peers at Serverless Computing London conference and discussing several topics dear to my engineering heart — Terraform and Serverless. Terraform is highly...",
+        "read_time": "4 min read",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-09-10T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "tb_type": "article",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      }
+    },
+    "/blog/terraform-for-serverless-series-enhanced-management-of-aws-lambda-functions/": {
+      "view": "blog-post/terraform-for-serverless-series-enhanced-management-of-aws-lambda-functions.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/blog/terraform-for-serverless-series-enhanced-management-of-aws-lambda-functions/",
+        "image": "https://www.terrahub.io/img/blog/2018-09-19/build-code-nodejs-javascript.png",
+        "title": "Terraform for Serverless Series: Enhanced Management of AWS Lambda Functions",
+        "description": "Sep 19th, 2018 | 5 min read | I quickly became fascinated by terraform's simplicity and ease of use. As an engineer, you can tell when a tool just works. This reliability and trust in positive results makes it indispensable. And...",
+        "read_time": "5 min read",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-09-19T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "tb_type": "article",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      }
+    },
+    "/blog/terraform-for-serverless-series-enhanced-management-of-amazon-s3-websites/": {
+      "view": "blog-post/terraform-for-serverless-series-enhanced-management-of-amazon-s3-websites.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/blog/terraform-for-serverless-series-enhanced-management-of-amazon-s3-websites/",
+        "image": "https://www.terrahub.io/img/blog/2018-09-28/build-code-terraform-bash.png",
+        "title": "Terraform for Serverless Series: Enhanced Management of Amazon S3 Websites",
+        "description": "Sep 28th, 2018 | 5 min read | Last week I started working on a new series of stories focused on terraform for serverless. Today I would like to double down on this approach and describe in details how our team provisions and deploys Amazon S3 with website hosting feature for static web pages or single page applications.",
+        "read_time": "5 min read",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-09-29T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "article",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      }
+    },
+    "/blog/terraform-for-serverless-series-enhanced-management-of-aws-fargate-tasks/": {
+      "view": "blog-post/terraform-for-serverless-series-enhanced-management-of-aws-fargate-tasks.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/blog/terraform-for-serverless-series-enhanced-management-of-aws-fargate-tasks/",
+        "image": "https://www.terrahub.io/img/blog/2018-10-19/build-code-containers-python.png",
+        "title": "Terraform for Serverless Series: Enhanced Management of AWS Fargate Tasks",
+        "description": "Oct 19th, 2018 | 5 min read | According to official website AWS Fargate is a compute engine for Amazon ECS that allows you to run containers without having to manage servers or clusters. In this article I will provide some magic around how to build terraform configurations that provision and deploy serverless containers.",
+        "read_time": "5 min read",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2018-10-19T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "article",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
+      }
+    }
+  }
+}

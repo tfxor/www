@@ -1,0 +1,26 @@
+
+@mixin custom-headline($img){
+  background: $img center center/100% auto no-repeat;
+  color: #fff;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin box-shadow($box-shadow) {
+  box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}

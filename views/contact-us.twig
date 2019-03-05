@@ -1,0 +1,121 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/contact-us.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="mob-hidden">
+        <div class="container contact-mobile">
+            <div class="bread-block">
+                <div class="breadcrumbs">
+                    <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/contact-us/" itemprop="item">
+                                <span itemprop="name">Contact Us</span>
+                                <meta itemprop="position" content="2" />
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/" itemprop="item">
+
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <meta itemprop="position" content="1" />
+                            </a>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="media-block">
+                    <span>Social Media</span>
+                    <a href="https://www.facebook.com/terrahubcorp" alt="TerraHub on Facebook" target="_blank" rel="noreferrer"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.twitter.com/terrahubcorp" alt="TerraHub on Twitter" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/terrahubcorp" alt="TerraHub on LinkedIn" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <hr class="line-gray">
+            <div class="contact-us">
+                <div class="flex-row">
+                    <div class="flex-item-6" itemscope itemtype="http://schema.org/PostalAddress">
+                        <h1>Contact Us</h1>
+                        <img src="{{ asset('@img/map.png') }}" alt="2 University Plaza Suite 100 Hackensack NJ 07601" />
+                        <h4 class="text-bold">HQ</h4>
+                        <div class="flex-row">
+                            <div class="flex-item-6">
+                                <div class="icons-info">
+                                    <i class="mdi-set mdi-map-marker" aria-hidden="true"></i>
+                                    <a href="https://goo.gl/oY87jd" class="location" target="_blank" rel="noreferrer">ATTN: Mitoc Group
+                                        <br/><span itemprop="streetAddress">2 University Plaza Suite 100</span>
+                                        <br/><span itemprop="addressLocality">Hackensack</span> <span itemprop="addressRegion">NJ</span> <span itemprop="postalCode">07601</span> <span itemprop="addressLocality">USA</span></a>
+                                </div>
+                            </div>
+                            <div class="flex-item-6">
+                                <div class="icons-info contacts">
+                                    <i class="mdi-set mdi-phone"></i>
+                                    <a href="tel:+18018108186" class="link-text" itemprop="telephone" content="+18018108186">(+1) 801 810 8186</a>
+                                </div>
+                                <div class="icons-info">
+                                    <i class="mdi mdi-email"></i>
+                                    <a href="mailto:hello@terrahub.io" class="link-text" itemprop="email">hello@terrahub.io</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item-6">
+                        <h2>Get In Touch</h2>
+                        <div class="color-block">
+                            <form id='contact-us' action="#" method="post" class="form-style">
+                                <div class="input-style">
+                                    <label for="email" class="title-blue">Email</label>
+                                    <div class="mc-form-group-EMAIL">
+                                        <input id="email" name="EMAIL" type="email" class="input" placeholder="john.smith@gmail.com" />
+                                        <div class="mc-error"></div>
+                                    </div>
+                                </div>
+                                <div class="input-style">
+                                    <label for="fullname" class="title-blue">Full Name</label>
+                                    <div class="mc-form-group-FNAME">
+                                        <input id="fullname" name="FNAME" type="text" class="input" placeholder="John Smith" />
+                                        <div class="mc-error"></div>
+                                    </div>
+                                </div>
+                                <div class="input-style">
+                                    <label for="company" class="title-blue">Company<span> optional</span></label>
+                                    <div class="mc-form-group-COMPANY">
+                                        <input id="company" name="COMPANY" type="text" class="input" placeholder="My Company" />
+                                        <div class="mc-error"></div>
+                                    </div>
+                                </div>
+                                <div class="input-style">
+                                    <label for="website" class="title-blue">Website<span> optional</span></label>
+                                    <div class="mc-form-group-WEBSITE">
+                                        <input id="website" name="WEBSITE" type="text" class="input" placeholder="www.mycompany.com" />
+                                        <div class="mc-error"></div>
+                                    </div>
+                                </div>
+                                <div class="input-style">
+                                    <label for="message" class="title-blue">Message</label>
+                                    <div class="mc-form-group-MESSAGE textarea-field">
+                                        <textarea id="message" name="MESSAGE" rows="6" cols="20" class="input" placeholder="My Message"></textarea>
+                                        <div class="mc-error"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input id="submit-form" type="submit" class="btn-dark-blue btn" value="Send Message">
+                                </div>
+                                <div id="mc-general-error"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/contact-us.min.js') }}"></script>
+{% endblock %}

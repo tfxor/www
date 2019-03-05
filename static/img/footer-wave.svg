@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="470px" viewBox="0 0 1440 470" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#6FCAFA" offset="0%"></stop>
+            <stop stop-color="#3E61DF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="1.-Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -2994.000000)">
+        <g id="Group-11" transform="translate(0.000000, 2983.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-9" transform="translate(0.000000, 11.000000)">
+                <path d="M0,48.8203125 C99.7057486,16.2734375 230.529977,9.71154219e-15 392.472685,0 C635.386748,0 782.529717,52.7519454 1017.70011,71.5752884 C1174.48037,84.1241837 1315.247,76.5391918 1440,48.8203125 L1440,469.820312 L0,469.820312 L0,48.8203125 Z" id="Rectangle-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

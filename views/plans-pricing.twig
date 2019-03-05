@@ -1,0 +1,254 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/plans-pricing.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="mob-hidden">
+        <div class="light-block plans-info">
+            <h4 class="title-blue center space-up">Services &amp; Features</h4>
+            <h3 class="info-text center">Detailed List of Services and Features</h3>
+            <label class="line-info">Get 2 Months Free!</label>
+
+            <div class="center control-button">
+                <span class="small-text">Paid Monthly</span>
+                <input type="checkbox" id="switch_second" />
+                <label for="switch_second" class="checkbox-button blue-checkbox">Toggle</label>
+                <span class="small-text">Paid Yearly</span>
+            </div>
+
+            <div class="container">
+                <table class="table table-plans table-highlight-all">
+                    <tr class="header">
+                        <th></th>
+                        <th class="col free-plan">
+                            <div class="cols">
+                                <div class="head-cols">
+                                    <p>Developer Plan</p>
+                                    <p class="price-m number">Free Forever</p>
+                                    <p class="price-y number">Free Forever</p>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="col flexible-plan">
+                            <div class="cols">
+                                <div class="head-cols">
+                                    <p>Business Plan</p>
+                                    <p class="price-m number"><i class="fa fa-usd" aria-hidden="true"></i>100+<label>/mo</label></p>
+                                    <p class="price-y number"><i class="fa fa-usd" aria-hidden="true"></i>1,000+<label>/yr</label></p>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="col all-inclusive-plan">
+                            <div class="cols">
+                                <div class="head-cols">
+                                    <p>Enterprise Plan</p>
+                                    <p class="price-m number">Contact Us</p>
+                                    <p class="price-y number">Contact Us</p>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <td class="row">Unlimited Number of Terraform Executions</td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                    </tr>
+                    <tr>
+                        <td class="row">Unlimited Number of Users (TerraHub Console)</td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                    </tr>
+                    <tr>
+                        <td class="row">Unlimited Number of Public Code Repositories</td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                    </tr>
+                    <tr>
+                        <td class="row">Unlimited Number of Private Code Repositories</td>
+                        <td><span><img src="{{ asset('@img/icons/close.svg') }}" alt="Close"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                    </tr>
+                    <tr>
+                        <td class="row">Unlimited Number of Cloud Accounts</td>
+                        <td><span><img src="{{ asset('@img/icons/close.svg') }}" alt="Close"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/close.svg') }}" alt="Close"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                    </tr>
+                    <tr>
+                        <td class="row">Deploy TerraHub Platform in Your Cloud Account</td>
+                        <td><span><img src="{{ asset('@img/icons/close.svg') }}" alt="Close"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/close.svg') }}" alt="Close"/></span></td>
+                        <td><span><img src="{{ asset('@img/icons/check.svg') }}" alt="Check"/></span></td>
+                    </tr>
+
+                    <tr class="tr-button">
+                        <td></td>
+                        <td>
+                            <div class="button-down">
+                                <a href="https://console.terrahub.io/" class="btn btn-light-blue">Select</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="button-down">
+                                <a href="https://console.terrahub.io/" class="btn btn-light-blue">Select</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="button-down">
+                                <a href="https://console.terrahub.io/" class="btn btn-light-blue">Select</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!--
+        <div class="container">
+            <h4 class="title-blue center space-up">FAQ</h4>
+            <h3 class="info-text center">Questions &amp; Answers</h3>
+            <ul class="bullets">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <div class="flex-row space-around">
+                <div class="flex-item-6">
+                    <p class="text-bold-small">Getting Started</p>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">Why do I need TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">What do I need to install TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">What do I need to install TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">What do I need to install TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">What do I need to install TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-item-6">
+                    <p class="text-bold-small">Popular Questions</p>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">Why do I need TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">Why do I need TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">Why do I need TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">Why do I need TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question-block">
+                            <a class="open-answer">
+                                <p class="questions">Why do I need TerraHub?</p>
+                                <span class="open"><img src="{{ asset('@img/icons/open.svg') }}" alt="Plus"/></span></a>
+                            <a class="close hidden"><img src="{{ asset('@img/icons/minus.svg') }}" alt="Plus" /></a>
+                        </div>
+                        <div class="close-answer show-me hidden">
+                            The last couple of years have been an interesting rollercoaster, with beautiful ups and painful downs. And, my friend, did we learn a lot!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="center">Didn't find the answer you're looking for?</p>
+            <div class="button-down center">
+                <a href="/contact-us/" class="btn-border-blue btn">Contact Us For More</a>
+            </div>
+        </div>
+        //-->
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/plans-pricing.min.js') }}"></script>
+{% endblock %}

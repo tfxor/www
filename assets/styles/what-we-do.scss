@@ -1,0 +1,90 @@
+@import './styles/variables';
+
+.about-us {
+    &.what-we-do {
+        .info-about {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: rgba(64, 74, 109, 0.1);
+                bottom: 0;
+            }
+        }
+        .arrow {
+            position: relative;
+            left: 50%;
+            top: -20px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: $white-color;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+            border: 2px solid rgba(64, 74, 109, 0.1);
+            .fa-angle-down {
+                color: $light-blue;
+                position: relative;
+                font-size: 23px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .description {
+            .text-bold-small {
+                color: $light-blue;
+            }
+            .text {
+                padding: 23px 0;
+                color: $main-color;
+                line-height: 26px;
+            }
+            &.block-line {
+                position: relative;
+                padding-bottom: 53px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background: rgba(64, 74, 109, 0.1);
+                    bottom: 0;
+                }
+            }
+        }
+        .under-line {
+            padding-top: 51px;
+            padding-bottom: 53px;
+            .roboto-slab-blue {
+                color: $dark-blue;
+                padding-bottom: 46px;
+            }
+            .display-flex {
+                flex-wrap: wrap;
+                .more-info {
+                    width: 50%;
+                    padding-right: 25px;
+                    .title-slab {
+                        padding-bottom: 10px;
+                    }
+                    p {
+                        padding-bottom: 25px;
+                        font-size: 14px;
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.what-we-do {
+    padding-top: 56px;
+    .cloud {
+        height: 34px;
+        margin-bottom: 9px;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <link rel="icon" href="{{ asset('@img/favicon.png') }}" type="image/png" />
+
+        {% if href %}<link rel="canonical" href="{{ href }}" />{% endif %}
+        {% if title %}<title>{{ title }}</title>{% endif %}
+        {% if title %}<meta name="title" content="{{ title }}" />{% endif %}
+        {% if description %}<meta name="description" content="{{ description }}" />{% endif %}
+        {% if image %}<meta property="image" src="{{ image }}" />{% endif %}
+
+        {% if author %}<link rel="author" href="{{ author }}" />{% endif %}
+        {% if author %}<meta property="author" content="{{ author }}" />{% endif %}
+        {% if author %}<meta property="article:author" content="{{ author }}" />{% endif %}
+        {% if publisher %}<meta property="article:publisher" content="{{ publisher }}" />{% endif %}
+        {% if timestamp %}<meta property="article:published_time" content="{{ timestamp }}" />{% endif %}
+
+        {% if href %}<meta property="og:url" content="{{ href }}" />{% endif %}
+        {% if title %}<meta property="og:title" content="{{ title }}" />{% endif %}
+        {% if description %}<meta property="og:description" content="{{ description }}" />{% endif %}
+        {% if image %}<meta property="og:image" content="{{ image }}" />{% endif %}
+        {% if image %}<meta property="og:image:secure_url" src="{{ image }}" />{% endif %}
+        {% if title %}<meta property="og:image:alt" content="{{ title }}" />{% endif %}
+        {% if fb_brand %}<meta property="og:site_name" content="{{ fb_brand }}" />{% endif %}
+        {% if fb_type %}<meta property="og:type" content="{{ fb_type }}" />{% endif %}
+
+        {% if description %}<meta name="twitter:description" content="{{ description }}" />{% endif %}
+        {% if image %}<meta name="twitter:image:src" content="{{ image }}" />{% endif %}
+        {% if title %}<meta name="twitter:image:alt" content="{{ title }}" />{% endif %}
+        {% if tw_type %}<meta name="twitter:card" content="{{ tw_type }}" />{% endif %}
+        {% if tw_handle %}<meta name="twitter:site" content="{{ tw_handle }}" />{% endif %}
+        {% if read_time %}<meta name="twitter:label1" value="Reading time" />{% endif %}
+        {% if read_time %}<meta name="twitter:data1" value="{{ read_time }}" />{% endif %}
+
+        {% block headers %}{% endblock %}
+
+        {% block css %}{% endblock %}
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N8TBP3C');</script>
+        <!-- End Google Tag Manager -->
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8TBP3C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        {# Header #}
+        {% if routeName in [ '/', '/plans-pricing/', '/contact-successful/', '/error/'] %}
+            {% include 'header.twig' %}
+        {% else %}
+            {% include 'menu.twig' %}
+        {% endif %}
+
+        {# Content #}
+        {% block body %}{% endblock %}
+
+        {# Prefooter #}
+        {% if routeName in ['/', '/what-we-do/', '/how-it-works/', '/plans-pricing/', '/privacy-policy/', '/terms-conditions/', '/contact-us/', '/about-us/', '/blog/', '/api/'] %}
+            {% include 'prefooter.twig' %}
+        {% endif %}
+
+        {# Footer #}
+        {% if routeName not in ['/blog/'] %}
+            {% set lastBlogs = [
+                {"featured": 1, "date": "September 19th, 2018", "image": "https://www.terrahub.io/img/blog/2018-09-19/build-code-nodejs-javascript.png", "href": "https://www.terrahub.io/blog/terraform-for-serverless-series-enhanced-management-of-aws-lambda-functions/", "title": "Terraform for Serverless Series: Enhanced Management of AWS Lambda Functions", "description": "I quickly became fascinated by terraform's simplicity and ease of use. As an engineer, you can tell when a tool just works"},
+                {"featured": 2, "date": "August 12th, 2018", "image": "https://www.terrahub.io/img/blog/2018-08-12/dashboard.png", "href": "https://www.terrahub.io/blog/introducing-terrahub-io-devops-hub-for-terraform/", "title": "Introducing TerraHub.io — DevOps Hub for Terraform", "description": "Over the last couple of months we have been working with several customers to reduce the development burden of terraform configuration and simplify the operational complexity of terraform automated workflows"},
+                {"featured": 3, "date": "August 27th, 2018", "image": "https://www.terrahub.io/img/blog/2018-08-27/terrahub-io-serverless-architecture-in-action.png", "href": "https://www.terrahub.io/blog/terrahub-io-serverless-architecture-in-action/", "title": "TerraHub.io Serverless Architecture in Action", "description": "When we started working on TerraHub CLI, our initial goal was to automate terraform execution and allow customer to trigger runs in self-service mode, as part of their existing GitHub and Jenkins pipelines"}
+            ] %}
+        {% endif %}
+        {% include 'footer.twig' %}
+
+    </body>
+    {% block js %}{% endblock %}
+</html>

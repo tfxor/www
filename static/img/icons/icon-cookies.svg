@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1.-Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-470.000000, -12.000000)">
+        <g id="COOKIE" fill="#00FFCF">
+            <g id="Group-8" transform="translate(471.000000, 13.000000)">
+                <g id="icon">
+                    <circle id="Oval" stroke="#00FFCF" opacity="0.200000018" cx="13" cy="13" r="13"></circle>
+                    <path d="M17.125,8.96875 L12.75,13.3125 L11.78125,12.34375 L16.15625,8 L17.125,8.96875 Z M20.03125,8 L21,8.96875 L12.75,17.1875 L8.9375,13.34375 L9.875,12.375 L12.75,15.21875 L20.03125,8 Z M5,13.34375 L6,12.375 L9.8125,16.21875 L8.84375,17.1875 L5,13.34375 Z" id="ion-android-done-all---Ionicons"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,99 @@
+<footer>
+    <div class="container logo-block">
+        {% if routeName not in ['/blog/'] %}
+            <div class="last-blogs">
+                <div class="flex-row">
+                    <div class="flex-column">
+                        <h3>Featured Posts</h3>
+                        <a href="/blog/" class="follow-button">Read more</a>
+                    </div>
+                    {% for lastBlog in lastBlogs %}
+                        <div class="flex-item-3">
+                            <div class="blog-post">
+                                <a href="{{ lastBlog.href }}">
+                                    <h5>{{ lastBlog.title }}</h5>
+                                    <p class="description">{{ lastBlog.description }}</p>
+                                </a>
+                                <div class="learn-more-b">
+                                    <p class="gray-blog">{{ lastBlog.date }}</p>
+                                    <a href="{{ lastBlog.href }}" class="learn-more">Learn more
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <div class="light-block">
+        <div class="container">
+            <div class="flex-row display-grid">
+                <div class="flex-item-3 item-1">
+                    <h5 class="title-blue">Sitemap</h5>
+                    <ul itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <li><a href="/how-it-works/" itemscope itemprop="url">How It Works</a></li>
+                        <li><a href="/plans-pricing/" itemscope itemprop="url">Plans &amp; Pricing</a></li>
+                        <li><a href="/about-us/" itemscope itemprop="url">About Us</a></li>
+                        <li><a href="/contact-us/" itemscope itemprop="url">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex-item-3 item-2">
+                    <h5 class="title-blue">What We Do</h5>
+                    <ul>
+                        <li><a href="/what-we-do/#centralized-realtime-dashboards">Centralized Realtime Dashboards</a></li>
+                        <li><a href="/what-we-do/#reliable-enforceable-automation">Reliable Enforceable Automation</a></li>
+                        <li><a href="/what-we-do/#data-driven-decisions">Data Driven Decisions</a></li>
+                        <li><a href="/blog/" itemscope itemprop="url">Read More on Our Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex-item-3 item-3">
+                    <h5 class="title-blue">Contacts</h5>
+                    <ul>
+                        <li><a href="https://goo.gl/oY87jd" target="_blank" rel="noreferrer">ATTN: Mitoc Group <br/>
+                          2 University Plaza Suite 100 <br/> Hackensack NJ 07601</a></li>
+                        <li><a href="tel:+18018108186" class="link-text">(+1) 801 810 8186</a></li>
+                        <li><a href="mailto:hello@terrahub.io" class="link-text">hello@terrahub.io</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex-item-3 item-4">
+                    <h5 class="title-blue">Subscribe</h5>
+                    <div class="input_button input-hover">
+                        <form id="subscribe-form" action="#" method="post">
+                            <div class="mc-form-group-EMAIL input_button input-hover">
+                                <input id="e-mail" name="EMAIL" type="email" class="input"
+                                    placeholder="john.smith@email.com"/>
+                                <div class="mc-error"></div>
+                            </div>
+                            <div id="mc-general"></div>
+                            <div>
+                                <span class="btn-circle"><i class="fa fa-angle-right" id="submit-form-subscribe" aria-hidden="true"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container logo-block">
+        <div class=" flex-row display-flex display-grid">
+            <div class="logo flex-item-3">
+                <a href="/"><img src="{{ asset('@img/logo/logo-text-dark.svg') }}" alt="TerraHub Logo" /></a>
+            </div>
+            <div class="flex-item-6">
+                <a href="/terms-conditions/" class="footer-link">Terms &amp; Conditions</a>
+                <a href="/privacy-policy/" class="footer-link">Privacy Policy</a>
+                <p>&copy; 2019 - <a href="https://www.terrahub.io">TerraHub</a></p>
+            </div>
+            <div class="flex-item-3 media-block">
+                <a href="https://www.facebook.com/terrahubcorp" alt="TerraHub on Facebook" target="_blank" rel="noreferrer" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.twitter.com/terrahubcorp" alt="TerraHub on Twitter" target="_blank" rel="noreferrer" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/terrahubcorp" alt="TerraHub on LinkedIn" target="_blank" rel="noreferrer" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>

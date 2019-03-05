@@ -1,0 +1,36 @@
+$light-bg: #FBF9F9;
+$white-color: #FFFFFF;
+$blue-color: #00FFCF;
+$color-light-blue: #6FCAFA;
+$blue-accent: #5898ED;
+$light-blue: #4065E0;
+$blue: #436BE2;
+$color-dark-blue: #2545A7;
+$main-color: #404A6D;
+$dark-blue: #1A2858;
+$error-color: #E82A61;
+$input-background: rgba(57, 63, 84, 0.8);
+$input-text-inactive: #7881A1;
+$input-text-active: #BFD2FF;
+$border-color: #dfe2e7;
+$gray-color: #BFBFBF;
+$link-color: #01ADFD;
+$section-width: 1100px;
+$section-based-calc: calc((100% - #{$section-width}) / 2);
+
+@function headings($from, $to) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  } @else {
+    @return 'h#{$from},' + headings($from+1, $to);
+  }
+}
+
+%clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

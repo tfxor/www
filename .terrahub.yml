@@ -1,0 +1,23 @@
+project:
+  name: 'TerraHub_Website'
+  code: '2ae8103c'
+  include: ['.terrahub']
+  exclude: ['**/.terraform']
+
+template:
+  locals:
+    region: 'us-east-1'
+    account_id: '123456789012'
+  terraform:
+    backend:
+      s3:
+        bucket: 'data-lake-terrahub-us-east-1'
+        region: 'us-east-1'
+        workspace_key_prefix: 'terraform_workspaces'
+  provider:
+    aws:
+      region: '${local.region}'
+      allowed_account_ids: ['${local.account_id}']
+
+terraform:
+  varFile: ['default.tfvars']

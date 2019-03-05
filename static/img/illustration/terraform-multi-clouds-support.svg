@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="69px" viewBox="0 0 106 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="99.4204861%" y1="49.9976879%" x2="0.896180556%" y2="49.9976879%" id="linearGradient-1">
+            <stop stop-color="#FABCE5" offset="0%"></stop>
+            <stop stop-color="#FBC6E9" stop-opacity="0.7641" offset="23.59%"></stop>
+            <stop stop-color="#FDE1F3" stop-opacity="0.3628" offset="63.72%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0.579166667%" y1="50.0304598%" x2="99.1034722%" y2="50.0304598%" id="linearGradient-2">
+            <stop stop-color="#FABCE5" offset="0%"></stop>
+            <stop stop-color="#FBC6E9" stop-opacity="0.7641" offset="23.59%"></stop>
+            <stop stop-color="#FDE1F3" stop-opacity="0.3628" offset="63.72%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <g id="Group-3">
+                <g>
+                    <path d="M66.3,20.2 C66.3,15 62.1,10.8 56.9,10.8 C54.9,10.8 53.1,11.4 51.6,12.4 C49,6.9 43.4,3.2 37,3.2 C28.1,3.2 20.8,10.4 20.8,19.4 C20.8,19.8 20.8,20.3 20.9,20.7 C16,22 12.3,26.5 12.3,31.8 C12.3,38.2 17.5,43.3 23.8,43.3 L36.8,43.3 C38.3,40.5 40.9,38.4 44,37.6 C44,37.2 43.9,36.8 43.9,36.3 C43.9,27.4 51.1,20.1 60.1,20.1 C62.2,20.1 64.2,20.5 66,21.2 C66.2,21.1 66.3,20.4 66.3,20.2 Z" id="Shape" fill="#3DD7EC"></path>
+                    <path d="M89.5,37.9 C89.5,37.6 89.5,37.4 89.5,37.1 C89.5,31.9 85.3,27.7 80.1,27.7 C78.1,27.7 76.1,28.3 74.6,29.3 C74.5,29 74.5,28.7 74.4,28.5 C74.8,29.6 75,30.8 75,32 C75,38.3 69.9,43.3 63.7,43.3 L36.9,43.3 C36,44.9 35.6,46.7 35.6,48.7 C35.6,55.1 40.8,60.2 47.1,60.2 L47.9,60.2 L86.9,60.2 C93.2,60.2 98.2,55.1 98.2,48.9 C98.2,43.6 94.5,39.1 89.5,37.9 Z" id="Shape" fill="#3DD7EC"></path>
+                    <path d="M75,32 C75,30.8 74.8,29.6 74.4,28.5 C71.6,23.5 66.2291016,20.0775391 60.2291016,20.0775391 C51.3291016,20.0775391 43.9125977,27.1587891 43.9125977,36.3666016 C43.9125977,36.7666016 43.8125977,37.2026367 43.9125977,37.6026367 C40.8125977,38.4026367 38.1415039,40.6 36.7415039,43.4 L63.8,43.4 C69.9,43.3 75,38.3 75,32 Z" id="Shape" fill="#22B5D8"></path>
+                    <polygon id="Shape" fill="url(#linearGradient-1)" points="28.8 60.5 19.2 51.6 19.2 55.8 0 55.8 0 64.7 19.2 64.7 19.2 68.9"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-2)" points="77.7 8.6 87.3 17.6 87.3 13.4 106.5 13.4 106.5 4.4 87.3 4.4 87.3 0.2"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

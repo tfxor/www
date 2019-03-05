@@ -1,0 +1,168 @@
+@import './styles/variables';
+
+.about-us {
+    .main-title {
+        color: $dark-blue;
+        text-transform: capitalize;
+    }
+    .wrapper-img {
+        img {
+            width: 100%;
+            max-height: 970px;
+            object-fit: cover;
+        }
+    }
+    .info-about {
+        padding-top: 34px;
+        padding-bottom: 74px;
+        .info {
+            padding-left: 40px;
+            line-height: 24px;
+            p {
+                padding-bottom: 20px;
+                color: $main-color;
+                line-height: 26px;
+                font-family: 'Roboto-Regular', sans-serif;
+                text-align: left;
+            }
+        }
+    }
+    .text-robotoslab {
+        line-height: 32px;
+        max-width: 367px;
+    }
+    .learn-more {
+        text-transform: capitalize;
+    }
+}
+
+.about {
+    &.light-block {
+        padding-top: 50px;
+        .info-text {
+            max-width: 50%;
+        }
+        .display-flex {
+            padding-bottom: 60px;
+            flex-wrap: wrap;
+            -webkit-justify-content: space-evenly;
+            justify-content: space-evenly;
+            align-items: baseline;
+            .display-flex {
+                &.media {
+                    padding-bottom: 0;
+                    justify-content: space-between;
+                    .media-block {
+                        a {
+                            color: rgba(64, 74, 109, 0.50);
+                            &:first-child {
+                                margin-right: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.space-left-right {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+            .blocks {
+                width: 300px;
+                border: 1px solid $color-light-blue;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                text-align: center;
+                background: $white-color;
+                background-image: url(../img/small-wave.svg);
+                background-position: center;
+                background-size: contain;
+                background-position-y: bottom;
+                background-repeat: no-repeat;
+                padding: 20px;
+                margin-bottom: 30px;
+                .info {
+                    line-height: 24px;
+                    cursor: pointer;
+                }
+                .more {
+                    cursor: pointer;
+                }
+                .team-less-more {
+                    .learn-more {
+                        .fa-angle-right {
+                            -moz-transform: scaleX(-1);
+                            -webkit-transform: scaleX(-1);
+                            -ms-transform: scaleX(-1);
+                            display: inline-block;
+                            vertical-align: unset;
+                        }
+                    }
+                }
+                .more {
+                    text-align: right;
+                }
+                .dots {
+                    position: relative;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-inline-box;
+                    display: -moz-inline-box;
+                    line-height: 24px;
+                    -webkit-line-clamp: 3;
+                    -moz-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    -moz-box-orient: vertical;
+                    -ms-box-orient: vertical;
+                    white-space: normal;
+                    max-height: 70px;
+                    cursor: pointer;
+                }
+                .header {
+                    display: flex;
+                    -webkit-justify-content: stretch;
+                    justify-content: stretch;
+                    margin-bottom: 20px;
+                    .avatar {
+                        cursor: pointer;
+                        img {
+                            height: 70px;
+                            width: 70px;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            border-radius: 50%;
+                        }
+                    }
+                    .description {
+                        display: inline-block;
+                        margin-left: 20px;
+                        margin-top: 10px;
+                        p {
+                            font-size: 14px;
+                            color: rgba(64, 74, 109, 0.50);
+                        }
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    text-align: left;
+                    &:not(:last-child) {
+                        padding-bottom: 10px;
+                    }
+                }
+                span {
+                    display: block;
+                    &:first-child {
+                        font-size: 44px;
+                        font-family: 'RobotoSlab-Regular', sans-serif;
+                        color: $light-blue;
+                    }
+                    &:last-child {
+                        width: 190px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

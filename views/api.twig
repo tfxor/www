@@ -1,0 +1,52 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/page-api.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="mob-hidden">
+        <div class="container">
+            <div class="bread-block">
+                <div class="breadcrumbs">
+                    <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/api/" itemprop="item">
+                                <span itemprop="name">Api</span>
+                                <meta itemprop="position" content="2"/>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/" itemprop="item">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <meta itemprop="position" content="1"/>
+                            </a>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="media-block">
+                    <span>Social Media</span>
+                    <a href="https://www.facebook.com/terrahubcorp/" alt="TerraHub on Facebook" target="_blank" rel="noreferrer">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/terrahubcorp" alt="TerraHub on Twitter" target="_blank" rel="noreferrer">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/terrahubcorp" alt="TerraHub on LinkedIn" target="_blank" rel="noreferrer">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="line-gray">
+            <div id="swagger-ui"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/page-api.min.js') }}"></script>
+{% endblock %}

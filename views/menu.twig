@@ -1,0 +1,44 @@
+<div class="wrapper all-pages">
+    <div class="logo-block logo-hide">
+        <nav class="container display-flex">
+            <div class="logo">
+                <a href="/" class="logo-white"><img src="{{ asset('@img/logo/logo-text-white.svg') }}" class="logo-top blue-menu" alt="TerraHub Logo" /></a>
+                <a href="/plans-pricing/" class="btn-free">Get 2 Months Free</a>
+                <div id="menu-toggle">
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="navt">
+                <ul class="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <li {{ routeName == '/what-we-do/' ? 'class="active"' }}>
+                        <a href="/what-we-do/" itemscope itemprop="url">What We Do</a>
+                    </li>
+                    <li {{ routeName == '/how-it-works/' ? 'class="active"' }}>
+                        <a href="/how-it-works/" itemscope itemprop="url">How It Works</a>
+                    </li>
+                    <li {{ routeName == '/plans-pricing/' ? 'class="active"' }}>
+                        <a href="/plans-pricing/" itemscope itemprop="url">Plans &amp; Pricing</a>
+                    </li>
+                    <li><a href="https://docs.terrahub.io" itemscope itemprop="url">Documentation</a></li>
+                    <li {{ routeName == '/blog/' ? 'class="active"' }}>
+                        <a href="/blog/" itemscope itemprop="url">Our Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="left-block navt">
+                <ul class="sign-menu">
+                    <li><a href="https://console.terrahub.io" class="btn-border-menu">Console</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr class="line">
+    </div>
+</div>

@@ -1,0 +1,53 @@
+{% if routeName in ['/','/terms-conditions/', '/privacy-policy/', '/blog/', '/contact-us/', '/api/'] %}
+    <div class="footer-wave space-top center flex-column">
+        <div class="container schema-bg">
+            <div class="wave-logo">
+                <a href="/"><img src="{{ asset('@img/logo/logo-dark.svg') }}" alt="TerraHub Logo" /></a>
+            </div>
+            <h2 class="main-title">DevOps Hub for Terraform Automation</h2>
+            <p class="title-text-mid small-space center-block">TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.</p>
+            <a href="/plans-pricing/" class="btn-blue-small btn">Select Your Plan Today</a>
+        </div>
+    </div>
+{# {% elseif routeName in ['/blog/', '/blog/terrahub-io-serverless-architecture-in-action/'] %}
+    <div class="container">
+    <hr class="line-top">
+    <div class="center">
+        <div class="pagination">
+            <a class="previous disable" href="#"><img src="{{ asset('@img/previous.svg') }}"/><span> Prev. </span></a>
+            <a class="{{ routeName == '/blog/' ? 'active' }}" href="/blog/">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#"><span> Next </span><img src="{{ asset('@img/next.svg') }}"/></a>
+        </div>
+    </div>
+    </div>
+    <div class="footer-wave space-top center flex-column">
+        <div class="container schema-bg">
+            <div class="wave-logo">
+                <a href="/"><img src="{{ asset('@img/logo/logo-dark.svg') }}" alt="TerraHub Logo" /></a>
+            </div>
+            <h2 class="main-title">DevOps Hub for Terraform Automation</h2>
+            <p class="title-text-mid small-space center-block">TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.</p>
+            <a href="/plans-pricing/" class="btn-blue-small btn">Select Your Plan Today</a>
+        </div>
+    </div> #}
+{% else %}
+    <div class="light-block about">
+        <div class="footer-wave center flex-column">
+            <div class="container schema-bg">
+                <div class="wave-logo">
+                    <a href="/"><img src="{{ asset('@img/logo/logo-dark.svg') }}" alt="TerraHub Logo"></a>
+                </div>
+                <h2 class="main-title">DevOps Hub for Terraform Automation</h2>
+                <p class="title-text-mid small-space center-block">TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.</p>
+                <a href="/plans-pricing/" class="btn-blue-small btn">Select Your Plan Today</a>
+            </div>
+        </div>
+    </div>
+{% endif %}

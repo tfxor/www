@@ -1,0 +1,444 @@
+@import './styles/mixins.scss';
+@import './styles/variables';
+
+@media (min-width: 1700px) {
+  .dev-docs {
+    .user-guide {
+      margin-left: calc((100% - 1296px) / 2);
+      p {
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .dev-docs {
+    margin: 88px 0 0;
+  }
+
+  .cb-container {
+    margin-top: 88px;
+  }
+}
+
+@media (min-width: 1231px) {
+  .dev-docs {
+    .user-guide {
+      .content-root {
+        background-color: #f3f6fb;
+        box-shadow: inset 780px 0 #fff, inset 781px 0 #dfe2e7,
+        inset 790px 0 5px -10px rgba(0,0,0,0.1);
+      }
+
+      .content {
+        padding-left: 0;
+        padding-right: 0;
+        width: 930px;
+        & > #{headings(1,3)} {
+          clear: both;
+          width: 100%;
+          box-sizing: border-box;
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+
+        & > pre {
+          width: 380px;
+          padding-left: 20px;
+          padding-right: 20px;
+          float: right;
+          clear: right;
+          & + p, & + ul, & + ol, & + #{headings(4,6)} {
+            clear: both;
+          }
+        }
+
+        & > blockquote, & > p, & > ul, & > ol, & > #{headings(4,6)} {
+          float: left;
+          clear: left;
+          width: 550px;
+          box-sizing: border-box;
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+
+        & > #{headings(3,5)} {
+          margin-left: 40px;
+          width: 470px;
+          margin-bottom: 3px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        & > table {
+          margin-left: 40px;
+          margin-right: 40px;
+          max-width: 470px;
+        }
+
+        & > h3 {
+          margin-left: 40px;
+          width: 470px;
+          margin-bottom: 3px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1230px) {
+  .dev-docs {
+    .user-guide {
+      width: 95%;
+      margin-left: 5%;
+
+      .content {
+        width: calc(100% - 230px);
+        pre {
+          & > code {
+            background: #f3f6fb;
+            border: solid 1px #e7eaee;
+            border-top: solid 1px #dbdde2;
+            border-left: solid 1px #e2e5e9;
+            display: block;
+            padding: 10px;
+            border-radius: 2px;
+            overflow: auto;
+          }
+        }
+
+        & > *:first-child {
+          padding-left: 65px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .dev-docs {
+    .user-guide {
+      .menubar {
+        position: sticky;
+        position: -webkit-sticky;
+        left: 0;
+        top: 70px;
+        bottom: 0;
+        width: 230px;
+        float: left;
+      }
+
+      .content {
+        float: left;
+      }
+
+      .content-root {
+        padding-bottom: 120px;
+      }
+    }
+
+    & ~ .demo-footer {
+      position: relative;
+      margin-top: -150px;
+    }
+
+    section {
+      padding-bottom: 150px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .dev-docs {
+    .user-guide {
+      width: 100%;
+      margin: 0;
+      .back-link {
+        left: 50px;
+      }
+
+      .content {
+        border-left: 0 none;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 40px 50px;
+        h1, h2, .big-heading {
+          padding-top: 40px;
+          &:before {
+            background: #dfe2e7;
+            left: -50px;
+            top: -20px;
+            width: calc(100% + 100px);
+          }
+        }
+
+        h3, h4, h5, .small-heading {
+          padding-top: 20px;
+        }
+      }
+
+      .menubar {
+        display: none;
+      }
+    }
+  }
+
+  .case-studies {
+    .mockup {
+      padding: 20px 25px 25px;
+      .mockup-head {
+        h1 {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .info-block {
+      p {
+        margin-top: 15px;
+      }
+    }
+
+    .case-logo {
+      max-width: 60%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .home-blocks {
+    & > .flex-row {
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      margin: 0;
+      & > * {
+        max-width: none;
+        padding: 0;
+        flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    img {
+      height: 130px;
+      float: left;
+      margin: 0 25px 0 0;
+      clear: both;
+    }
+
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+
+  .main-pic {
+    height: 300px;
+  }
+
+  .api-action {
+    float: none;
+  }
+
+  .api-docs {
+    h1 {
+      float: none;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .case-studies {
+    & > .flex-row {
+      display: block;
+      margin: 0;
+      & > * {
+        max-width: none;
+        padding: 0;
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) and (min-width: 691px) {
+  .case-studies {
+    .case-logo {
+      max-width: 40%;
+      float: left;
+      margin: 0 20px 5px 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .content-root {
+    padding-left: 0;
+  }
+  .menubar {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .dev-docs {
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .back-link {
+      line-height: 30px;
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  .swagger-section {
+    .swagger-ui-wrap {
+      #api_info {
+        .info_title {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .dev-docs {
+    section, section.home-blocks {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .user-guide {
+      .back-link {
+        left: 25px;
+      }
+
+      .content {
+        padding: 40px 25px;
+        & > *:first-child {
+          padding-left: 55px;
+        }
+
+        h1, h2, .big-heading {
+          &:before {
+            left: -25px;
+            width: calc(100% + 50px);
+          }
+        }
+      }
+    }
+  }
+
+  .home-blocks {
+    & > .flex-row {
+      & > * {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    img {
+      margin: 0 15px 0 0;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .case-studies {
+    .case-logo {
+      max-width: none;
+      height: 55px;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .mockup {
+      .mockup-head {
+        font-size: 13px;
+        h1 {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+  .home-blocks {
+    .action {
+      clear: both;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .dev-docs {
+    section {
+      &.case-studies {
+        padding-top: 30px;
+        .mockup {
+          .mockup-head {
+            font-size: 12px;
+          }
+        }
+
+        .case-logo {
+          height: 45px;
+        }
+      }
+    }
+
+    .user-guide {
+      .back-link {
+        left: 20px;
+        top: 30px;
+      }
+
+      .content {
+        padding: 30px 20px 20px;
+        h1, h2, .big-heading {
+          padding-top: 40px;
+          &:before {
+            background: #dfe2e7;
+            left: -20px;
+            top: -20px;
+            width: calc(100% + 40px);
+          }
+        }
+
+        h3, h4, h5, .small-heading {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .home-blocks {
+    img {
+      height: auto;
+      float: none;
+      margin-bottom: 15px;
+    }
+  }
+
+  .main-pic {
+    height: 250px;
+  }
+}

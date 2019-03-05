@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="67px" viewBox="0 0 98 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50.1149425%" y1="99.6986063%" x2="50.1149425%" y2="0.831010453%" id="linearGradient-1">
+            <stop stop-color="#00FFCE" offset="0%"></stop>
+            <stop stop-color="#0AFFD0" stop-opacity="0.9147" offset="8.525504%"></stop>
+            <stop stop-color="#25FFD5" stop-opacity="0.769" offset="23.1%"></stop>
+            <stop stop-color="#52FFDE" stop-opacity="0.5804" offset="41.96%"></stop>
+            <stop stop-color="#8FFFEA" stop-opacity="0.3563" offset="64.37%"></stop>
+            <stop stop-color="#DCFFF8" stop-opacity="0.105" offset="89.5%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50.0219697%" y1="1.08772727%" x2="50.0219697%" y2="98.4390909%" id="linearGradient-2">
+            <stop stop-color="#EAF0F8" offset="0%"></stop>
+            <stop stop-color="#CDDFF4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50.0257092%" y1="0.00975177305%" x2="50.0257092%" y2="99.8916667%" id="linearGradient-3">
+            <stop stop-color="#F9FBFD" offset="0%"></stop>
+            <stop stop-color="#EAF0F8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-3.98985507%" y1="67.0686567%" x2="53.9811594%" y2="-3.82686567%" id="linearGradient-4">
+            <stop stop-color="#3DD7EC" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#3DC4EC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero">
+            <g id="Group-5">
+                <polygon id="Shape" fill="url(#linearGradient-1)" points="8.7 29.5 17.6 20 13.4 20 13.4 0.8 4.5 0.8 4.5 20 0.2 20"></polygon>
+                <circle id="Oval" fill="url(#linearGradient-2)" cx="64.5" cy="33.8" r="33"></circle>
+                <circle id="Oval" fill="url(#linearGradient-3)" cx="64.5" cy="33.8" r="28.2"></circle>
+                <path d="M76.1,27.5 C75.7,27 74.9,27 74.5,27.4 L65.7,35.1 L65.7,18.3 C65.7,17.7 65.2,17.1 64.5,17.1 C63.9,17.1 63.3,17.6 63.3,18.3 L63.3,37.6 C63.3,37.9 63.4,38.2 63.6,38.5 C64,39 64.8,39 65.2,38.6 L76,29.2 C76.5,28.7 76.5,28 76.1,27.5 Z" id="Shape" fill="#303A44"></path>
+                <polygon id="Shape" fill="#3DD7EC" points="0.2 46 0.2 66.8 50.9 66.8 50.9 39.1 7.1 39.1"></polygon>
+                <polygon id="Shape" fill="url(#linearGradient-4)" points="7.1 46 0.4 52.7 0.2 46"></polygon>
+                <polygon id="Shape" fill="#80F6FF" points="0.2 46 7.1 46 7.1 39.1"></polygon>
+                <circle id="Oval" fill="#80F6FF" cx="25.6" cy="53" r="6.4"></circle>
+                <circle id="Oval" fill="#80F6FF" cx="40.4" cy="53" r="1.8"></circle>
+                <circle id="Oval" fill="#80F6FF" cx="10.7" cy="53" r="1.8"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

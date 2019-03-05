@@ -1,0 +1,170 @@
+@import './styles/variables';
+.how-it-works {
+    .bullets {
+        padding-bottom: 0;
+    }
+    .container {
+        .space-up-down {
+            .main-title {
+                color: $dark-blue;
+            }
+        }
+    }
+    .work-bg {
+        background-image: url(../img/illustration-bg.svg);
+        background-position: 78% 50%;
+        background-repeat: no-repeat;
+        color: $white-color;
+        height: 1016px;
+    }
+    .light-block {
+        padding-top: 78px;
+        padding-bottom: 74px;
+        .info-block {
+            .flex-row {
+                .flex-item-6 {
+                    &.flex-column {
+                        &.space-btn {
+                            width: 76%;
+                        }
+                    }
+                }
+                &:first-child {
+                    .flex-item-6 {
+                        padding-top: 47px;
+                    }
+                }
+                .flex-item-6 {
+                    &.space-btn {
+                        .btn-dark-blue {
+                            margin-top: 22px;
+                        }
+                        &:first-child {
+                            padding-bottom: 153px;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .flex-item-6 {
+                        img {
+                            margin-left: 0;
+                        }
+                        &.flex-column {
+                            left: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .info-blocks {
+            .carousel-info {
+                text-align: center;
+                .arrow-bottom {
+                    height: 195px;
+                    margin-top: 34px;
+                }
+            }
+            .flex-row {
+                .cloud-info {
+                    max-width: none;
+                    &.arrow {
+                        img {
+                            height: 30px;
+                            display: inline;
+                        }
+                    }
+                    &.flex-item-4 {
+                        .img-cloud {
+                            height: 193px;
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cloud-info {
+    &.arrow {
+        &.responsive-arrow {
+            height: 30px;
+            display: none;
+        }
+    }
+}
+
+.carousel-schema {
+    .cloud-info {
+        margin-bottom: 0;
+        .flex-column {
+            min-height: 400px;
+            margin-bottom: 46px;
+            .arrow {
+                margin-top: auto;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .slick-next,
+    .slick-prev {
+        width: 20px;
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 6;
+    }
+    .slick-next {
+        right: 15px;
+        &:hover,
+        &:focus {
+            background-image: url(../img/icons/arrow-right.svg);
+            background-repeat: no-repeat;
+        }
+        &:before {
+            content: '';
+        }
+        background-image: url(../img/icons/arrow-right.svg);
+        background-repeat: no-repeat;
+        &.slick-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    .slick-prev {
+        left: 15px;
+        &:hover,
+        &:focus {
+            background-image: url(../img/icons/arrow-left.svg);
+            background-repeat: no-repeat;
+        }
+        &:before {
+            content: '';
+        }
+        background-image: url(../img/icons/arrow-left.svg);
+        background-repeat: no-repeat;
+        &.slick-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    &.slick-slider {
+        .slick-list {
+            z-index: 3;
+        }
+    }
+    .slick-dots {
+        top: -35px;
+        li {
+            button {
+                &:before {
+                    font-size: 20px;
+                    color: $light-blue;
+                }
+            }
+            &.slick-active {
+                color: $light-blue;
+            }
+        }
+    }
+}

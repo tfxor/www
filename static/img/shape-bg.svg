@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="770px" viewBox="0 0 1440 770" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#6FCAFA" offset="0%"></stop>
+            <stop stop-color="#69BEF7" offset="11.6538232%"></stop>
+            <stop stop-color="#5FA9F1" offset="31.7502773%"></stop>
+            <stop stop-color="#5CA2F0" offset="37.9353094%"></stop>
+            <stop stop-color="#3E61DF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="1.-Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,0 L1440,0 L1440,700 C1169.88802,746.666667 929.888021,770 720,770 C510.111979,770 270.111979,746.666667 0,700 L0,0 Z" id="Rectangle" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

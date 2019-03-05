@@ -1,0 +1,85 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/blog.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="mob-hidden">
+        <header class="container u-maxWidth740">
+            <div class="header-post display-flex">
+                <div class="avatar-blog">
+                    <img src="{{ asset('@img/avatar-eistrati.png') }}" alt="Eugene Istrati" />
+                </div>
+                <div class="about">
+                    <div class="flex">
+                        <a href="https://twitter.com/eistrati">eistrati</a>
+                        <a href="https://twitter.com/intent/user?screen_name=eistrati" class="btn-follow">
+                            <span>Follow</span>
+                        </a>
+                    </div>
+                    <p>
+                        Proud Father. Lucky Husband. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <div class="post">
+            {% block content %}{% endblock %}
+        </div>
+        <footer class="footer-post container u-maxWidth740">
+            <div class="u-paddindBottom-20 u-paddindTop-20 line-up u-pagginfLeftRight-20">
+                <div class="flex-row">
+                    <div class="flex-item-6">
+                        <div class="displayTable">
+                            <div class="avatar-blog">
+                                <img src="{{ asset('@img/avatar-eistrati.png') }}" alt="Eugene Istrati" />
+                            </div>
+                        </div>
+
+                        <div class="displayTable u-verticalAlignMiddle u-paddingLeft-15 u-paddingTop-15">
+                            <div class="title-post u-paddingBotton-4">
+                                <a href="https://twitter.com/eistrati">eistrati</a>
+                            </div>
+                            <p class="p-footer u-paddingBotton-4">
+                                Proud Father. Lucky Husband. DevOps | Automation | Serverless @MitocGroup. Former @AWScloud and @HearstCorp.
+                            </p>
+                        </div>
+                        <div class="displayTable u-verticalAlignTop">
+                            <a href="https://twitter.com/intent/user?screen_name=eistrati" class="btn-follow u-paddingLeft-15">
+                                <span>Follow</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-item-6">
+                        <div class="displayTable">
+                            <div class="logo">
+                                <img src="{{ asset('@img/logo/logo-dark.svg') }}" alt="TerraHub Logo" />
+                            </div>
+                        </div>
+                        <div class="displayTable u-verticalAlignMiddle u-paddingLeft-15 u-paddingTop-15">
+                            <div class="title-post u-paddingBotton-4">
+                                <a href="https://twitter.com/terrahubcorp">TerraHub</a>
+                            </div>
+                            <p class="p-footer u-paddingBotton-4">
+                                TerraHub is the DevOps Hub for Terraform Automation. It includes
+                                terraform automation and orchestration tool called TerraHub CLI,
+                                data and logs management layer called TerraHub API and enterprise
+                                friendly GUI to show realtime terraform executions called TerraHub Console.
+                            </p>
+                        </div>
+                        <div class="displayTable u-verticalAlignTop">
+                            <a href="https://twitter.com/intent/user?screen_name=terrahubcorp" class="btn-follow displayTable u-verticalAlignTop u-paddingLeft-15">
+                                <span>Follow</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/blog.min.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/index.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="light-block main-page" itemscope itemtype="http://schema.org/Service">
+        <div class="container">
+            <h4 class="title-blue center space-up">Business Value</h4>
+            <h3 class="info-text center">TerraHub provides managed services that simplifies cloud resources management using terraform</h3>
+            <ul class="bullets">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <section class="info-block container main-page">
+            <div class="flex-row display-grid">
+                <div class="flex-item-6 flex-column">
+                    <a href="/what-we-do/#centralized-realtime-dashboards">
+                        <p class="text-bold-small">Centralized Realtime Dashboards</p>
+                        <h4 class="text-slab">Save Money with Realtime Dashboards</h4>
+                        <p>Centralized dashboards with realtime features on cloud resources management, across multiple cloud accounts and cloud regions, as well as across multiple cloud providers.</p>
+                    </a>
+                    <div><a href="/what-we-do/#centralized-realtime-dashboards" class="learn-more">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                </div>
+                <div class="flex-item-6">
+                    <img src="{{ asset('@img/illustration/terraform-centralized-realtime-dashboards.svg') }}" alt="Centralized Realtime Dashboards" />
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="flex-item-6">
+                    <img src="{{ asset('@img/illustration/terraform-reliable-enforceable-automation.svg') }}" alt="Reliable Enforceable Automation" />
+                </div>
+                <div class="flex-item-6 flex-column">
+                    <a href="/what-we-do/#reliable-enforceable-automation">
+                        <p class="text-bold-small">Reliable Enforceable Automation</p>
+                        <h4 class="text-slab">Save Time with Reliable Automation</h4>
+                        <p>Reliable and enforceable automation of VM-based, Containers or Serverless resources across infrastructure, platform and application layers.</p>
+                    </a>
+                    <div>
+                        <a href="/what-we-do/#reliable-enforceable-automation" class="learn-more">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-row display-grid">
+                <div class="flex-item-6 flex-column">
+                    <a href="/what-we-do/#data-driven-decisions">
+                        <p class="text-bold-small">Data Driven Decisions</p>
+                        <h4 class="text-slab">Reduce Risks with Data Driven Decisions</h4>
+                        <p>Data driven decisions through machine learning and artificial intelligence to cloud resources management via cloud native services combined with open source technologies.</p>
+                    </a>
+                    <div><a href="/what-we-do/#data-driven-decisions" class="learn-more">Learn more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                </div>
+                <div class="flex-item-6">
+                    <img src="{{ asset('@img/illustration/terraform-data-driven-decisions.svg') }}" alt="Data Driven Decisions" />
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container info-blocks">
+        <p class="title-blue center space-top">Technical Value</p>
+        <p class="info-text center">Easy provisioning and simplified management of cloud resources across multiple cloud accounts and cloud providers</p>
+        <ul class="bullets">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="display-flex">
+            <div class="cloud-info">
+                <img src="{{ asset('@img/illustration/terraform-automation-code-improvements.svg') }}" itemprop="image" alt="Create Code Faster" />
+                <p class="title-slab">Create Code Faster</p>
+                <span>We make it easier and faster to create reusable terraform configurations</span>
+            </div>
+            <div class="cloud-info">
+                <img src="{{ asset('@img/illustration/terraform-multi-clouds-support.svg') }}" itemprop="image" alt="Managed Code Repositories" />
+                <p class="title-slab">Managed Code Repositories</p>
+                <span>We simplify the way developers use their terraform configurations across multiple code repositories</span>
+            </div>
+            <div class="cloud-info">
+                <img src="{{ asset('@img/illustration/terraform-less-management-overhead.svg') }}" itemprop="image" alt="Distributed Code Execution" />
+                <p class="title-slab">Distributed Code Execution</p>
+                <span>We distribute terraform executions and automatically test results of terraform commands</span>
+            </div>
+            <div class="cloud-info">
+                <img src="{{ asset('@img/illustration/terraform-time-money-savings.svg') }}" itemprop="image" alt="Time Money Savings" />
+                <p class="title-slab">Time &amp; Money Savings</p>
+                <span>We provide centralized dashboards with realtime features on terraform executions and cloud resources management</span>
+            </div>
+            <div class="cloud-info">
+                <img src="{{ asset('@img/illustration/terraform-auditing-reporting.svg') }}" itemprop="image" alt="Enterprise Grade Reporting" />
+                <p class="title-slab">Enterprise Grade Reporting</p>
+                <span>We allow you to run entire process in your cloud environments, powered by enterprise grade auditing and reporting</span>
+            </div>
+        </div>
+        <div class="center">
+            <hr class="line-gray">
+            <a href="https://console.terrahub.io" class="btn-border-blue btn">Sign Up Today</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/index.min.js') }}"></script>
+{% endblock %}

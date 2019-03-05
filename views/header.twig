@@ -1,0 +1,263 @@
+{% if routeName == '/' %}
+    <div class="wrapper main-bg">
+        <div class="logo-block logo-hide">
+            <nav class="container display-flex">
+                <div class="logo">
+                    <a href="/" class="logo-white"><img src="{{ asset('@img/logo/logo-text-white.svg') }}" class="logo-top blue-menu" alt="TerraHub Logo" /></a>
+                    <a href="/plans-pricing/" class="btn-free">Get 2 Months Free</a>
+                    <div id="menu-toggle">
+                        <div id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div id="cross">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navt" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <ul class="navigation">
+                        <li><a href="/what-we-do/" itemprop="url">What We Do</a></li>
+                        <li><a href="/how-it-works/" itemprop="url">How It Works</a></li>
+                        <li><a href="/plans-pricing/" itemprop="url">Plans &amp; Pricing</a></li>
+                        <li><a href="https://docs.terrahub.io" itemprop="url">Documentation</a></li>
+                        <li><a href="/blog/" itemprop="url">Our Blog</a></li>
+                    </ul>
+                </div>
+                <div class="left-block navt">
+                    <ul class="sign-menu">
+                        <li><a href="https://console.terrahub.io" class="btn-border-menu">Console</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr class="line">
+        </div>
+        <div class="container" itemscope itemtype="http://schema.org/Service">
+            <div class="space-up-down center">
+                <h1 class="main-title" itemprop="name">DevOps Hub for Terraform Automation</h1>
+                <p class="title-text-mid small-space center-block" itemprop="description">TerraHub ecosystem includes terraform automation and orchestration tool called TerraHub CLI, data and logs management layer called TerraHub API and enterprise friendly GUI to show realtime terraform executions called TerraHub Console.</p>
+                <a href="/plans-pricing/" class="btn-blue btn">OSS Projects - Free Forever</a>
+                <a href="/plans-pricing/" class="btn-transparent btn"><i class="fa fa-play" aria-hidden="true"></i>Watch Short Demo</a>
+            </div>
+            <img src="{{ asset('@img/illustration/illustration.svg') }}" class="main-img" alt="TerraHub Illustration" />
+        </div>
+    </div>
+{% elseif routeName == '/plans-pricing/' %}
+    <div class="wrapper main-bg plans-page">
+        <div class="logo-block logo-hide">
+            <nav class="container display-flex">
+                <div class="logo">
+                    <a href="/" class="logo-white"><img src="{{ asset('@img/logo/logo-text-white.svg') }}" class="logo-top blue-menu" alt="TerraHub Logo" /></a>
+                    <a href="/plans-pricing/" class="btn-free">Get 2 Months Free</a>
+                    <div id="menu-toggle">
+                        <div id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div id="cross">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navt">
+                    <ul class="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <li><a href="/what-we-do/" itemprop="url">What We Do</a></li>
+                        <li><a href="/how-it-works/" itemprop="url">How It Works</a></li>
+                        <li class="active"><a href="/plans-pricing/" itemprop="url">Plans &amp; Pricing</a></li>
+                        <li><a href="https://docs.terrahub.io" itemprop="url">Documentation</a></li>
+                        <li><a href="/blog/" itemprop="url">Our Blog</a></li>
+                    </ul>
+                </div>
+                <div class="left-block navt">
+                    <ul class="sign-menu">
+                        <li><a href="https://console.terrahub.io" class="btn-border-menu">Console</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr class="line">
+        </div>
+
+        <div class="plans container center">
+            <h1 class="main-title center space-up">Plans &amp; Pricing</h1>
+            <div class="center control-button">
+                <span class="small-text">Paid Monthly</span>
+                <input type="checkbox" id="switch" />
+                <label for="switch" class="checkbox-button">Toggle</label>
+                <span class="small-text">Paid Yearly</span>
+            </div>
+        </div>
+
+        <div class="mob-hidden">
+            <div class="container plan-block">
+                <div class="table-block space-left-right">
+                    <div class="display-flex plans plans-check carousel-plans" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <div class="plans-blocks free">
+                            <span class="text-robotoslab center" itemprop="name">Developer Plan</span>
+                            <span class="main-title center price-m" itemprop="price">Free Forever</span>
+                            <span class="main-title center price-y" itemprop="price">Free Forever</span>
+                            <ul>
+                                <li><span>Unlimited terraform executions</span></li>
+                                <li><span>Unlimited public code repositories</span></li>
+                                <li><span>Unlimited resources within 2 cloud accounts</span></li>
+                            </ul>
+                            <div class="button-down">
+                                <a href="https://console.terrahub.io/" class="btn btn-border-blue">Select Plan</a>
+                                <a href="https://console.terrahub.io/" class="btn btn-dark-blue">I Want It!</a>
+                            </div>
+                            <a class="hidden-link hidden" href="#" data-plan="free-plan">Details<i class="fa fa-angle-down bounce"></i></a>
+                        </div>
+                        <div class="plans-blocks flexible active">
+                            <span class="text-robotoslab center" itemprop="name">Business Plan</span>
+                            <span class="main-title center price-m" itemprop="price"><i class="fa fa-usd" aria-hidden="true"></i>100+<label>/mo</label></span>
+                            <span class="main-title center price-y" itemprop="price"><i class="fa fa-usd" aria-hidden="true"></i>1,000+<label>/yr</label></span>
+                            <ul>
+                                <li><span>Unlimited terraform executions</span></li>
+                                <li><span>Unlimited public and private code repositories</span></li>
+                                <li><span>Unlimited resources within up to 20 cloud accounts</span></li>
+                            </ul>
+                            <div class="button-down">
+                                <a href="https://console.terrahub.io/" class="btn btn-border-blue">Select Plan</a>
+                                <a href="https://console.terrahub.io/" class="btn btn-dark-blue hidden">I Want It!</a>
+                            </div>
+                            <a class="hidden-link hidden" href="#" data-plan="flexible-plan">Details<i class="fa fa-angle-down bounce"></i></a>
+                        </div>
+                        <div class="plans-blocks inclusive">
+                            <span class="text-robotoslab center" itemprop="name">Enterprise Plan</span>
+                            <span class="main-title center price-m" itemprop="price">Contact Us</span>
+                            <span class="main-title center price-y" itemprop="price">Contact Us</span>
+                            <ul>
+                                <li><span>Unlimited terraform executions</span></li>
+                                <li><span>Unlimited public and private code repositories</span></li>
+                                <li><span>Unlimited resources within unlimited cloud accounts</span></li>
+                            </ul>
+                            <div class="button-down">
+                                <a href="https://console.terrahub.io/" class="btn btn-border-blue">Select Plan</a>
+                                <a href="https://console.terrahub.io/" class="btn btn-dark-blue">I Want It!</a>
+                            </div>
+                            <a class="hidden-link hidden" href="#" data-plan="all-inclusive-plan">Details<i class="fa fa-angle-down bounce"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% elseif routeName == '/contact-successful/' %}
+    <div class="wrapper header-bg">
+        <div class="logo-block logo-hide">
+            <nav class="container display-flex">
+                <div class="logo">
+                    <a href="/" class="logo-white"><img src="{{ asset('@img/logo/logo-text-white.svg') }}" class="logo-top blue-menu" alt="TerraHub Logo" /></a>
+                    <a href="/plans-pricing/" class="btn-free">Get 2 Months Free</a>
+                    <div id="menu-toggle">
+                        <div id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div id="cross">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navt">
+                    <ul class="navigation">
+                        <li><a href="/what-we-do/">What We Do</a></li>
+                        <li><a href="/how-it-works/">How It Works</a></li>
+                        <li><a href="/plans-pricing/">Plans &amp; Pricing</a></li>
+                        <li><a href="https://docs.terrahub.io" itemprop="url">Documentation</a></li>
+                        <li><a href="/blog/">Our Blog</a></li>
+                    </ul>
+                </div>
+                <div class="left-block navt">
+                    <ul class="sign-menu">
+                        <li><a href="https://console.terrahub.io" class="btn-border-menu">Console</a></li>
+                    </ul>
+                </div>
+            </nav>
+        <hr class="line">
+    </div>
+        <div class="mob-hidden">
+            <div class="signin-form thank-you">
+                <div class="main-bg bg-color">
+                    <div class="flex-column">
+                        <div class="signin-block flex-column">
+                            <img src="{{ asset('@img/icons/ok.svg') }}" alt="Thank You"/>
+                            <h1 class="main-title">Thank You!</h1>
+                            <span id="mc-message" class="title-text-mid"></span>
+                            <div class="button-down">
+                                <p>Want to learn more about TerraHub?</p>
+                                <a href="/plans-pricing/" class="btn-dark-blue btn">Select Your Plan Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mob-hidden">
+        <div class="center btn-out">
+            <a href="/" class="btn-border-blue btn">Go To Homepage</a>
+        </div>
+    </div>
+{% elseif routeName == '/error/' %}
+    <div class="wrapper header-bg">
+        <div class="logo-block logo-hide">
+            <nav class="container display-flex">
+                <div class="logo">
+                    <a href="/" class="logo-white"><img src="{{ asset('@img/logo/logo-text-white.svg') }}" class="logo-top blue-menu" alt="TerraHub Logo" /></a>
+                    <a href="/plans-pricing/" class="btn-free">Get 2 Months Free</a>
+                    <div id="menu-toggle">
+                        <div id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div id="cross">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navt">
+                    <ul class="navigation">
+                        <li><a href="/what-we-do/">What We Do</a></li>
+                        <li><a href="/how-it-works/">How It Works</a></li>
+                        <li><a href="/plans-pricing/">Plans &amp; Pricing</a></li>
+                        <li><a href="https://docs.terrahub.io" itemprop="url">Documentation</a></li>
+                        <li><a href="/blog/">Our Blog</a></li>
+                    </ul>
+                </div>
+                <div class="left-block navt">
+                    <ul class="sign-menu">
+                        <li><a href="https://console.terrahub.io" class="btn-border-menu">Console</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr class="line">
+        </div>
+
+        <div class="mob-hidden">
+            <div class="signin-form thank-you">
+                <div class="main-bg bg-color">
+                    <div class="flex-column">
+                        <div class="signin-block flex-column">
+                            <img src="{{ asset('@img/404.svg') }}" class="img-notfound" alt="Oops ... You got an Error!" />
+                            <h1 class="main-title">Oops ... You got an Error!</h1>
+                            <span class="title-text-mid text-space">Requested URL was not found on <br/> this server, or this page was deleted</span>
+                            <div class="button-down">
+                                <p>Try again?</p>
+                                <a href="/" class="btn-border-blue btn">Go to Homepage</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="not-found"></div>
+{% endif %}

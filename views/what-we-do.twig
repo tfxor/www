@@ -1,0 +1,247 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/what-we-do.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="mob-hidden">
+        <div class="container">
+            <div class="bread-block">
+                <div class="breadcrumbs">
+                    <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/what-we-do/" itemprop="item">
+                                <span itemprop="name">What We Do?</span>
+                                <meta itemprop="position" content="2" />
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/" itemprop="item">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <meta itemprop="position" content="1" />
+                            </a>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="media-block">
+                    <span>Social Media</span>
+                    <a href="https://www.facebook.com/terrahubcorp" alt="TerraHub on Facebook" target="_blank" rel="noreferrer" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.twitter.com/terrahubcorp" alt="TerraHub on Twitter" target="_blank" rel="noreferrer" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/terrahubcorp" alt="TerraHub on LinkedIn" target="_blank" rel="noreferrer" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <hr class="line-gray">
+        </div>
+
+        <div class="container about-us what-we-do">
+            <div class="center what-we-do">
+                <img src="{{ asset('@img/logo/logo-dark.svg') }}" class="cloud" alt="TerraHub Logo">
+                <h1 class="main-title" itemprop="name">Cloud Native Approach</h1>
+            </div>
+            <div class="flex-row info-about margin-left-right">
+                <div class="flex-item-6" itemprop="description">
+                    <p class="text-robotoslab">Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world.</p>
+                </div>
+                <div class="flex-item-6 info">
+                    <p>Managing IT environments in the cloud is arguably NOT getting easier because there are so many solutions to similar problems and customers are getting overwhelmed. Public cloud providers like Amazon Web Services, Microsoft Azure or Google Cloud Platform are releasing services and features on daily basis, forcing everybody else to adopt flexible change management processes and policies.</p>
+                    <p>TerraHub was created as a response to growing complexity associated with cloud. We are providing incremental value by managing large amount of cloud services and cloud resources that run in customers' private networks built on top of public clouds. We engage a business model that consists of managed services by providing support and management of terraform, as well as professional services by building and deploying terraform automation.</p>
+                </div>
+            </div>
+            <div class="center arrow">
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="flex-row description block-line space-top margin-left-right display-grid">
+                <div class="flex-item-6">
+                    <a id="centralized-realtime-dashboards"><p class="text-bold-small">Realtime Dashboards</p></a>
+                    <h4 class="main-title" itemprop="name">Save Money with Centralized Realtime Dashboards</h4>
+                    <p class="text" itemprop="description">
+                        Every terraform execution produces valuable data. For example, terraform plan lets us know if specific cloud resource will be created or updated (sometimes re-created by deleting the old one and creating the new one). Meanwhie terraform apply returns json object with "affected" cloud resources and corresponding metadata (also known as attributes). Unfortunately, terraform doesn't offer out of the box an usable graphical interface, that consolidates all data across all terraform configurations and all cloud resources, even if those resources are deployed across different cloud accounts or even across different cloud providers.
+                    </p>
+                </div>
+                <div class="flex-item-6 img-size flex-column">
+                    <img src="{{ asset('@img/illustration/terraform-centralized-realtime-dashboards.svg') }}" itemprop="image" class="img-left" alt="Centralized Realtime Dashboards" />
+                </div>
+            </div>
+            <div class="flex-row under-line margin-left-right">
+                <div class="flex-item-7">
+                    <p class="roboto-slab-blue">
+                        TerraHub dashboards provide realtime view into cloud resources across multiple cloud providers, multiple cloud accounts, multiple cloud regions and multiple cloud services.
+                    </p>
+                    <div class="display-flex">
+                        <div class="more-info">
+                            <h5 class="title-slab">Cloud Providers</h5>
+                            <p>Supported cloud providers include Amazon Web Services, Google Cloud Platform, Microsoft Azure, and many more. See list <a href="https://www.terraform.io/docs/providers/type/major-index.html" target="_blank" rel="noreferrer">here</a> and <a href="https://www.terraform.io/docs/providers/type/cloud-index.html" target="_blank" rel="noreferrer">here</a>.</p>
+                        </div>
+                        <div class="more-info">
+                            <h5 class="title-slab">Cloud Accounts</h5>
+                            <p>Every cloud provider identifies customers through corresponding accounts. For example, an account from Amazon Web Services is 12 digits number.</p>
+                        </div>
+                        <div class="more-info">
+                            <h5 class="title-slab">Cloud Regions</h5>
+                            <p>Cloud resources are provisioned and managed in so-called regions, collection of data centers that are geographically located in close proximity to each other.</p>
+                        </div>
+                        <div class="more-info">
+                            <h5 class="title-slab">Cloud Services</h5>
+                            <p>Cloud services are building blocks for common use cases in terms of compute, storage, networking, security, monitoring ... and list goes on and on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-item-5">
+                    <div class="add-block">
+                        <a href="/plans-pricing/" class="btn-free">Get 2 Months Free</a>
+                        <p class="info-text">Start Now</p>
+                        <ul class="bullets">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href="https://console.terrahub.io" class="btn-blue-small btn">Sign Up Today</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="light-block">
+            <div class="container about-us what-we-do">
+                <div class="flex-row description block-line margin-left-right display-grid">
+                    <div class="flex-item-6">
+                        <a id="reliable-enforceable-automation"><p class="text-bold-small">Reliable Automation</p></a>
+                        <h4 class="main-title" itemprop="name">Save Time with Reliable Enforceable Automation</h4>
+                        <p class="text" itemprop="description">
+                            Building reliable and enforceable automation processes is not an easy job and takes time to get it right.  The keys to successful automation are (1) automated scripts and (2) automated tests. Now, if we are completely honest with ourselves, engineers usually enjoy doing first part and hardly have time for second part. Terraform, in combination with other open source projects, provides amazing capabilities to address both parts of automated workflows. Unfortunately, this means that engineers have to code each step of automated execution and code again each step of automated testing.
+                        </p>
+                    </div>
+                    <div class="flex-item-6 flex-column">
+                        <img src="{{ asset('@img/illustration/terraform-reliable-enforceable-automation.svg') }}" itemprop="image" class="img-left" alt="Reliable Enforceable Automation" />
+                    </div>
+                </div>
+                <div class="flex-row under-line margin-left-right">
+                    <div class="flex-item-7">
+                        <p class="roboto-slab-blue">
+                            TerraHub provides native capabilities to create reusable terraform configurations, run automated terraform workflows and test each step of automation.
+                        </p>
+                        <div class="display-flex">
+                            <div class="more-info">
+                                <h5 class="title-slab">Automated Executions</h5>
+                                <p>Distributed approach to terraform executions allows developers to reduce time and improve productivity.</p>
+                            </div>
+                            <div class="more-info">
+                                <h5 class="title-slab">Automated Testing</h5>
+                                <p>Testing each step of automation empowers developers to build reliable, enforceable and auditable processes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item-5">
+                        <div class="add-block add-dark">
+                            <a href="/plans-pricing/" class="btn-free">Get 2 Months Free</a>
+                            <p class="info-text">Start Now</p>
+                            <ul class="bullets">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <a href="https://console.terrahub.io" class="btn-blue-small btn">Sign Up Today</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container about-us what-we-do">
+            <div class="flex-row description block-line margin-left-right display-grid">
+                <div class="flex-item-6">
+                    <a id="data-driven-decisions"><p class="text-bold-small">Data Driven Decisions</p></a>
+                    <h4 class="main-title" itemprop="name">Reduce Risks with Data Driven Decisions</h4>
+                    <p class="text" itemprop="description">
+                        Data is the new currency that empowers those who use it wisely. Companies embracing data at core of their decisions report exponential growth and positive benefits. Next generation businesses use data as a fundamental building block for decision making powered by machine learning and artificial intelligence. For vast majority of companies, data driven decisions reduce risks. Unfortunately, terraform's automated workflows don't consume their own data, in order to minimize risks and maximize benefits. Engineers must build additional capabilities to make that happen.
+                    </p>
+                </div>
+                <div class="flex-item-6 small-img flex-column">
+                    <img src="{{ asset('@img/illustration/terraform-data-driven-decisions.svg') }}" itemprop="image" class="img-left" alt="Data Driven Decisions" />
+                </div>
+            </div>
+            <div class="flex-row under-line margin-left-right">
+                <div class="flex-item-7">
+                    <p class="roboto-slab-blue">
+                        TerraHub is designed as a data driven platform that consumes its own data. We use terraform and TerraHub, in order to build and manage TerraHub.
+                    </p>
+                    <div class="display-flex">
+                        <div class="more-info">
+                            <h5 class="title-slab">TerraHub API</h5>
+                            <p>
+                                Collection of RESTful API endpoints that manage TerraHub, as well as operations associated with Cloud, Code, CI &amp; CD.
+                            </p>
+                        </div>
+                        <div class="more-info">
+                            <h5 class="title-slab">TerraHub Console</h5>
+                            <p>
+                                Management console is a single page application powered by Cloud, Microservices, Serverless and JavaScript.
+                            </p>
+                        </div>
+                        <div class="more-info">
+                            <h5 class="title-slab">TerraHub Web</h5>
+                            <p>
+                                Marketing website that you're currently reading from, designed to inform and educate customers on the value added capabilities.
+                            </p>
+                        </div>
+                        <div class="more-info">
+                            <h5 class="title-slab">TerraHub CLI</h5>
+                            <p>
+                                Open source component that simplifies provisioning and management of large amount of cloud resources via multiple terraform configurations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-item-5">
+                    <div class="add-block">
+                        <a href="/plans-pricing/" class="btn-free">Get 2 Months Free</a>
+                        <p class="info-text">Start Now</p>
+                        <ul class="bullets">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href="https://console.terrahub.io" class="btn-blue-small btn">Sign Up Today</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="light-block about">
+            <div class="container">
+            <h4 class="title-blue center space-up">Humble Stats</h4>
+            <h3 class="info-text center">We worked hard, so you don't have to.</h3>
+            <ul class="bullets">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="display-flex space-left-right">
+                <div class="blocks flex-column">
+                    <span>1K</span>
+                    <span>Managed Open Source Projects</span>
+                </div>
+                <div class="blocks flex-column">
+                    <span>10K</span>
+                    <span>Executed Terraform Configurations</span>
+                </div>
+                <div class="blocks flex-column">
+                    <span>100K</span>
+                    <span>Processed Terraform Resources</span>
+                </div>
+            </div>
+                <div class="center info-blocks" itemscope="" itemtype="http://schema.org/Person">
+                    <hr class="line-gray">
+                    <a href="https://console.terrahub.io" class="btn-border-blue btn">Sign Up Today</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/what-we-do.min.js') }}"></script>
+{% endblock %}

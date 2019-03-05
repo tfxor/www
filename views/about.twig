@@ -1,0 +1,375 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/page-about.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="mob-hidden">
+        <div class="container">
+            <div class="bread-block">
+                <div class="breadcrumbs">
+                    <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/about-us/" itemprop="item">
+                                <span itemprop="name">About Us</span>
+                                <meta itemprop="position" content="2" />
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <a href="/" itemprop="item">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <meta itemprop="position" content="1" />
+                            </a>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="media-block">
+                    <span>Social Media</span>
+                    <a href="https://www.facebook.com/terrahubcorp" alt="TerraHub on Facebook" target="_blank" rel="noreferrer"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.twitter.com/terrahubcorp" alt="TerraHub on Twitter" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/terrahubcorp" alt="TerraHub on LinkedIn" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <hr class="line-gray">
+        </div>
+        <div class="container about-us">
+            <div class="space-left-right">
+                <h1 class="center space-up main-title">About Us</h1>
+                <ul class="bullets">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="wrapper-img">
+                    <img  src='{{ asset('@img/about-us.svg') }}' alt="TerraHub Logo"/>
+                </div>
+
+                <div class="flex-row info-about">
+                    <div class="flex-item-6">
+                        <p class="text-robotoslab">
+                            Our mission is to enable businesses and developers to provide high-value products and services in a constantly changing digital world.
+                        </p>
+                    </div>
+                    <div class="flex-item-6 info">
+                        <p>
+                            Managing IT in the cloud is arguably NOT getting easier because of so many solutions to similar problems that get customers lost or overwhelmed. Public cloud providers like Amazon Web Services, Microsoft Azure or Google Cloud Platform are releasing services and features on daily basis, forcing everybody else to adopt flexible change management processes and policies.
+                        </p>
+                        <p>
+                            TerraHub was created as a response to growing complexity associated with cloud. We are providing incremental value by managing large amount of cloud services and cloud resources that run in customers' private networks built on top of public clouds. We engage a business model that consists of managed services by providing support and management of terraform, as well as professional services by building and deploying terraform automation.
+                        </p>
+                        <a href="/how-it-works/" class="learn-more">Learn More About How It Works <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="light-block about">
+            <div class="container">
+                <h4 class="title-blue center space-up">TerraHub Team</h4>
+                <h3 class="info-text center">Continuously managing and improving on behalf of customers and partners</h3>
+                <ul class="bullets">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="display-flex space-left-right">
+                    <div class="blocks flex-column" itemscope itemtype="http://schema.org/Person">
+                        <div class="header">
+                            <div class="avatar">
+                                <img src="{{ asset('@img/team/eugene.png') }}" itemprop="image" alt="Eugene Istrati" />
+                            </div>
+                            <div class="description">
+                                <label class="title-slab" itemprop="name">Eugene Istrati</label>
+                                <p>Product</p>
+                            </div>
+                        </div>
+                        <div class="dots info" itemprop="description">
+                            <p>
+                                Eugene Istrati has spent almost two decades as a technologist in a variety of industries, including digital media, cloud computing, and reputation marketing. He is a visionary and goal-oriented technology leader, with demonstrated experience in planning, developing and implementing cutting edge information solutions to address business opportunities.
+                            </p>
+                            <div class="hidden-block hidden">
+                                <p>
+                                    Before co-founding Mitoc Group, Eugene worked as Director of Engineering at Hearst Corporation. He helped iconic publisher to redefine and transform their business in the digital world. Prior, Mr. Istrati worked as Program Manager at Amazon Web Services, helping businesses and developers accelerate their cloud computing journeys on AWS cloud.
+                                </p>
+                                <p>
+                                    Eugene blogs occasionally and speaks at industry conferences, technology meetups and other similar events. He has presented at ServerlessConf 2017 and AWS re:Invent 2017 on his favorite topic – serverless computing.
+                                </p>
+                                <p>
+                                    He graduated from University of Oradea, Romania with a dual Bachelor of Science degree in Mathematics and Computer Science and a Master of Science degree in Computer Science and Engineering. His masters degree was later assessed and validated by University of Columbia, New York.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="display-flex media">
+                            <div class="media-block">
+                                <a href="https://www.linkedin.com/in/eistrati/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/eistrati" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="more team-show-more"><a class="learn-more">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                            <div class="more team-less-more hidden"><a class="learn-more">Read less <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="blocks flex-column" itemscope itemtype="http://schema.org/Person">
+                        <div class="header">
+                            <div class="avatar">
+                                <img src="{{ asset('@img/team/diana.png') }}" itemprop="image" alt="Diana Ursu" />
+                            </div>
+                            <div class="description">
+                                <label class="title-slab" itemprop="name">Diana Ursu</label>
+                                <p>Business</p>
+                            </div>
+                        </div>
+                        <div class="dots info" itemprop="description">
+                            <p>
+                                Diana Ursu is an ambitious and confident leader, who work effectively in a fast-moving organization. She spent over fifteen years helping companies in many business aspects, including management and control, as well as development and marketing, by asking the right questions and finding the optimal paths to profit.
+                            </p>
+                            <div class="hidden-block hidden">
+                                <p>
+                                    Diana has the ability to commit to a bigger cause and possesses values like common sense, people and relationship skills, curiosity and critical thinking, tolerance and risk taking, admiration and respect for entrepreneurship.
+                                </p>
+                                <p>
+                                    Before co-founding Mitoc Group, Mrs. Ursu worked as Global Business Development at Michael C. Fina in New York. She contributed to company's expansion into Europe, China and Latin America, generating over $10M in new opportunities. Prior, Diana held various positions across Business Development, Industrial Management, Commercial Planning and Marketing for multi billion dollar corporation, Tenaris.
+                                </p>
+                                <p>
+                                    Diana holds a Bachelor Degree in Finance from Aurel Vlaicu University, Romania.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="display-flex media">
+                            <div class="media-block">
+                                <a href="https://www.linkedin.com/in/dursu/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/dianaursu" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="more team-show-more"><a class="learn-more">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                            <div class="more team-less-more hidden"><a class="learn-more">Read less <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="blocks flex-column" itemscope itemtype="http://schema.org/Person">
+                        <div class="header">
+                            <div class="avatar">
+                                <img src="{{ asset('@img/team/vlad.png') }}" itemprop="image" alt="Vladimir Ursu" />
+                            </div>
+                            <div class="description">
+                                <label class="title-slab" itemprop="name">Vladimir Ursu</label>
+                                <p>Operations</p>
+                            </div>
+                        </div>
+                        <div class="dots info" itemprop="description">
+                            <p>
+                                Vladimir Ursu has started the entrepreneurial life early in high school working in industries like Finance, Digital Media, Cloud Computing. He is visionary goal oriented with 10+ years experience in entrepreneurship, planning, crisis management, quality assurance, finance, human resources.
+                            </p>
+                            <div class="hidden-block hidden">
+                                <p>
+                                    Vladimir is passionate resolving project challenges and creating the process to meet the deadlines. Also, Vladimir is passioned in helping people/teams upgrade their professional level and keep them motivated using couching technics. In future trying himself in public speaking.
+                                </p>
+                                <p>
+                                    Before co-founding Mitoc Group, Vladimir founded several companies from which is PyCoding and 404 Moldova. Worked as Quality Assurance Team Lead, Operations Manager, Project Manager for respectable companies like Thomson Reuters and TD Ameritrade. He had helped to deliver several challenging projects in finance.
+                                </p>
+                                <p>
+                                    He graduated State University from Moldova with Bachelor of Science degree in Economics - Banks and Stock Exchange.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="display-flex media">
+                            <div class="media-block">
+                                <a href="http://www.linkedin.com/in/vursu" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/vladimir_ursu" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="more team-show-more"><a class="learn-more">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                            <div class="more team-less-more hidden"><a class="learn-more">Read less <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="blocks flex-column" itemscope itemtype="http://schema.org/Person">
+                        <div class="header">
+                            <div class="avatar">
+                                <img src="{{ asset('@img/team/dmitrii.png') }}" itemprop="image" alt="Dmitrii Dimitrioglo" />
+                            </div>
+                            <div class="description">
+                                <label class="title-slab" itemprop="name">Dmitri Dimitrioglo</label>
+                                <p>Engineering</p>
+                            </div>
+                        </div>
+                        <div class="dots info" itemprop="description">
+                            <p>
+                                Dmitri Dimitrioglo is a web developer who is "in love" about programming despite the fact that he is originally from another area.
+                            </p>
+                            <div class="hidden-block hidden">
+                                <p>
+                                    He loves a clean and simple code and tries to use the most of the language's native functionality. Dmitri is excited about the open source community and does his best to be a part of it.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="display-flex media">
+                            <div class="media-block">
+                                <a href="https://www.linkedin.com/in/dimitrioglo/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/ddimitrioglo" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="more team-show-more"><a class="learn-more">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                            <div class="more team-less-more hidden"><a class="learn-more">Read less <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="blocks flex-column" itemscope itemtype="http://schema.org/Person">
+                        <div class="header">
+                            <div class="avatar">
+                                <img src="{{ asset('@img/team/emil.png') }}" itemprop="image" alt="Emil Urechean" />
+                            </div>
+                            <div class="description">
+                                <label class="title-slab" itemprop="name">Emil Urechean</label>
+                                <p>Engineering</p>
+                            </div>
+                        </div>
+                        <div class="dots info" itemprop="description">
+                            <p>
+                                Emil is a senior engineer with over 10 years of experience who helps cloud users to make their processes automatic.
+                            </p>
+                            <div class="hidden-block hidden">
+                                <p>
+                                    Mr. Urechean worked as a software engineer and a system architect at leading IT organizations in Moldova. His successful career includes major achievements in implementing digital public services for government agencies, as well as invoice processing automation for several local banks.
+                                </p>
+                                <p>
+                                    Emil's passion nowadays consists in helping customers to build and migrate IT infrastructures on AWS cloud using Terraform. Besides that, he frequently enjoys cycling and watching sci-fi movies.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="display-flex media">
+                            <div class="media-block">
+                                <a href="https://www.linkedin.com/in/emil-urechean-a61b8599/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="more team-show-more"><a class="learn-more">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                            <div class="more team-less-more hidden"><a class="learn-more">Read less <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="blocks flex-column" itemscope itemtype="http://schema.org/Person">
+                        <div class="header">
+                            <div class="avatar">
+                                <img src="{{ asset('@img/team/alex.png') }}" itemprop="image" alt="Alexandr Vozicov" />
+                            </div>
+                            <div class="description">
+                                <label class="title-slab" itemprop="name">Alexandr Vozicov</label>
+                                <p>Engineering</p>
+                            </div>
+                        </div>
+                        <div class="dots info" itemprop="description">
+                            <p>Alexandr Vozicov is Quality Assurance Engineer with 3 years experience. He monitors every phase of the software development process to ensure product quality.</p>
+                            <div class="hidden-block hidden">
+                                <p>
+                                    On a daily basis he develops manual and automation test cases, writes test plans and reports, participates in daily meeting with clients and performs various checks.
+                                </p>
+                                <p>
+                                    He is also passionate in producing electronic music and visual art. His perfectionism makes him be good in both direction work and hobby.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="display-flex media">
+                            <div class="media-block">
+                                <a href="https://www.linkedin.com/in/alexandr-vozicov-860796106/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/alexandrvozicov" target="_blank" rel="noreferrer"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="more team-show-more"><a class="learn-more">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                            <div class="more team-less-more hidden"><a class="learn-more">Read less <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                        </div>
+                    </div>
+                    {#<div class="blocks flex-column" itemscope itemtype="http://schema.org/Person">#}
+                        {#<div class="header">#}
+                            {#<div class="avatar">#}
+                                {#<img src="{{ asset('@img/team/irina.png') }}" itemprop="image" alt="Irina Tcaciuc" />#}
+                            {#</div>#}
+                            {#<div class="description">#}
+                                {#<label class="title-slab" itemprop="name">Irina Tcaciuc</label>#}
+                                {#<p>User Experience</p>#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="dots info" itemprop="description">#}
+                            {#<p>#}
+                                {#Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.#}
+                            {#</p>#}
+                            {#<div class="hidden-block hidden">#}
+                                {#<p>#}
+                                    {#It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.#}
+                                {#</p>#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="display-flex media">#}
+                            {#<div class="media-block">#}
+                                {#<a href="https://www.linkedin.com/in/eistrati/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>#}
+                                {#<a href="https://twitter.com/eistrati" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>#}
+                            {#</div>#}
+                            {#<div class="more team-show-more"><a class="learn-more">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>#}
+                            {#<div class="more team-less-more hidden"><a class="learn-more">Read less <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>#}
+                        {#</div>#}
+                    {#</div>#}
+                    {#<div class="blocks flex-column" itemscope itemtype="http://schema.org/Person">#}
+                        {#<div class="header">#}
+                            {#<div class="avatar">#}
+                                {#<img src="{{ asset('@img/team/vitalii.png') }}" itemprop="image" alt="Vitalii Razgulin" />#}
+                            {#</div>#}
+                            {#<div class="description">#}
+                                {#<label class="title-slab" itemprop="name">Vitalii Razgulin</label>#}
+                                {#<p>User Experience</p>#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="dots info" itemprop="description">#}
+                            {#<p>#}
+                                {#Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.#}
+                            {#</p>#}
+                            {#<div class="hidden-block hidden">#}
+                                {#<p>#}
+                                    {#It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.#}
+                                {#</p>#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="display-flex media">#}
+                            {#<div class="media-block">#}
+                                {#<a href="https://www.linkedin.com/in/vitalii-razgulin-303880113/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>#}
+                                {#<a href="https://dribbble.com/razgulin" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>#}
+                            {#</div>#}
+                            {#<div class="more team-show-more"><a class="learn-more">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>#}
+                            {#<div class="more team-less-more hidden"><a class="learn-more">Read less <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>#}
+                        {#</div>#}
+                    {#</div>#}
+                    {#<div class="blocks flex-column" itemscope itemtype="http://schema.org/Person">#}
+                        {#<div class="header">#}
+                            {#<div class="avatar">#}
+                                {#<img src="{{ asset('@img/team/iulian.png') }}" itemprop="image" alt="Iulian Gramatki" />#}
+                            {#</div>#}
+                            {#<div class="description">#}
+                                {#<label class="title-slab" itemprop="name">Iulian Gramatki</label>#}
+                                {#<p>Engineering</p>#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="dots info" itemprop="description">#}
+                            {#<p>#}
+                                {#Iulian's main area of expertise for the TerraHub project is data science and machine learning. He is a specialist in econometrics and research methods at Simetrica Ltd. in London.#}
+                            {#</p>#}
+                            {#<div class="hidden-block hidden">#}
+                                {#<p>#}
+                                    {#Before that, Iulian worked at Goethe University Frankfurt as a Research and Teaching Assistant in econometrics in the Department of Empirical Economic Research. He also completed a traineeship in the Economics team at the European Stability Mechanism in Luxembourg.#}
+                                {#</p>#}
+                                {#<p>#}
+                                    {#Iulian holds a PhD in Economics and an MSc in Quantitative Economics at Goethe University Frankfurt and a BSc in Business Administration with a minor in Political Science at Saint Louis University, Madrid Campus.#}
+                                {#</p>#}
+                            {#</div>#}
+                        {#</div>#}
+                        {#<div class="display-flex media">#}
+                            {#<div class="media-block">#}
+                                {#<a href="https://www.linkedin.com/in/iulian-gramatki-582b77145/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>#}
+                            {#</div>#}
+                            {#<div class="more team-show-more"><a class="learn-more">Read more <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>#}
+                            {#<div class="more team-less-more hidden"><a class="learn-more">Read less <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>#}
+                        {#</div>#}
+                    {#</div>#}
+                </div>
+                <div class="center info-blocks">
+                    <hr class="line-gray">
+                    <a href="https://console.terrahub.io" class="btn-border-blue btn">Sign Up Today</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/page-about.min.js') }}"></script>
+{% endblock %}
