@@ -4,8 +4,8 @@
 if [ -f .terrahub_build.env ]; then . .terrahub_build.env; fi
 
 ## Validate environmental variables
-if [ -z "${THUB_S3_PATH}" ]; then
-  echo 'ERROR: THUB_S3_PATH variable is empty. Aborting...'
+if [ -z "${THUB_S3_PATH}" || -z "${THUB_GS_PATH}"]; then
+  echo 'ERROR: THUB_S3_PATH or THUB_GS_PATH variable is empty. Aborting...'
   exit 1
 fi
 
@@ -22,7 +22,7 @@ if [ "${THUB_BUILD_OK}" == "true" ]; then
   npm install node-sass -g --unsafe-perm=true || { echo 'ERROR: Failed to run npm install node-sass -g'; exit 1; }
   npm install || { echo 'ERROR: Failed to run npm install'; exit 1; }
   npm run compile || { echo 'ERROR: Failed to run npm run compile'; exit 1; }
-  npm run sitemap ${THUB_S3_PATH/s3/https} || { echo 'ERROR: Failed to run npm run sitemap'; exit 1; }
+  npm run sitemap ${THUB_S3_PATH/[s3|gs]/https} || { echo 'ERROR: Failed to run npm run sitemap'; exit 1; }
   mv ${THUB_BUILD_PATH}/error/index.html ${THUB_BUILD_PATH}/404.html
   if [ -z "${THUB_ROBOTS}" ]; then
     echo 'WARNING: THUB_ROBOTS variable is empty'
