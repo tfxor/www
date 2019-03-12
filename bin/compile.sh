@@ -17,12 +17,14 @@ fi
 ## Check if the project must be built
 if [ "${THUB_BUILD_OK}" == "true" ]; then
   echo "THUB_BUILD_OK='${THUB_BUILD_OK}' ==> Starting build process."
-  PARENT_DIR="$( dirname "${BASH_SOURCE[0]}" )"
+  CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+  cd ${CURRENT_DIR}/..
+  PREVIOUS_DIR=${OLDPWD}
 
   npm --version > /dev/null 2>&1 || { echo >&2 'ERROR: npm is missing. Aborting...'; exit 1; }
   npm config set depth 0 || { echo 'ERROR: Failed to run npm config'; exit 1; }
-  npm install node-sass --unsafe-perm=true --prefix $PARENT_DIR || { echo 'ERROR: Failed to run npm install node-sass -g'; exit 1; }
-  npm install --prefix $PARENT_DIR || { echo 'ERROR: Failed to run npm install'; exit 1; }
+  npm install node-sass --unsafe-perm=true || { echo 'ERROR: Failed to run npm install node-sass -g'; exit 1; }
+  npm install || { echo 'ERROR: Failed to run npm install'; exit 1; }
   npm run compile || { echo 'ERROR: Failed to run npm run compile'; exit 1; }
   npm run sitemap ${THUB_S3_PATH/[s3|gs]/https} || { echo 'ERROR: Failed to run npm run sitemap'; exit 1; }
 
@@ -32,6 +34,8 @@ if [ "${THUB_BUILD_OK}" == "true" ]; then
   else
     cp ${THUB_ROBOTS} ${THUB_BUILD_PATH}/robots.txt
   fi
+
+  cd ${PREVIOUS_DIR}
   echo "THUB_BUILD_OK='${THUB_BUILD_OK}' ==> Finishing build process."
 else
   echo "THUB_BUILD_OK='${THUB_BUILD_OK}' ==> Skipping build process."
