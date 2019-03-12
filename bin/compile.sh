@@ -4,8 +4,8 @@
 if [ -f .terrahub_build.env ]; then . .terrahub_build.env; fi
 
 ## Validate environmental variables
-if [ -z "${THUB_S3_PATH}" ] || [ -z "${THUB_GS_PATH}" ]; then
-  echo 'ERROR: THUB_S3_PATH or THUB_GS_PATH variable is empty. Aborting...'
+if [ -z "${THUB_S3_PATH}" ] && [ -z "${THUB_GS_PATH}" ]; then
+  echo 'ERROR: THUB_S3_PATH and THUB_GS_PATH variable is empty. Aborting...'
   exit 1
 fi
 
