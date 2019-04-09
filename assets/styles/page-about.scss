@@ -131,6 +131,8 @@
                             -webkit-border-radius: 50%;
                             -moz-border-radius: 50%;
                             border-radius: 50%;
+                            object-fit: cover;
+                            border: 3px solid $border-color;
                         }
                     }
                     .description {
