@@ -15,18 +15,7 @@
     .container {
         width: 1144px;
     }
-    .about {
-        &.light-block {
-            .display-flex {
-                -webkit-justify-content: stretch;
-                justify-content: stretch;
-                .blocks {
-                    margin-right: 15px;
-                    margin-left: 15px;
-                }
-            }
-        }
-    }
+
     .small-container {
         width: 500px;
         .initial-link {
@@ -274,10 +263,21 @@
     }
     .about {
         &.light-block {
-            .display-flex {
+            .display-grid {
                 &.space-left-right {
                     padding-left: 0;
                     padding-right: 0;
+                    .blocks {
+                        .title-slab {
+                            font-size: 14px;
+                        }
+                        .more {
+                            .learn-more {
+                                font-size: 12px;
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -656,6 +656,14 @@
             input[type=text] {
                 width: 100%;
                 max-width: 100%;
+            }
+        }
+    }
+    .about {
+        &.light-block {
+            .display-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                grid-gap: 10px;
             }
         }
     }
