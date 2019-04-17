@@ -42,16 +42,17 @@
         .info-text {
             max-width: 50%;
         }
-        .display-flex {
+        .display-grid {
             padding-bottom: 60px;
-            flex-wrap: wrap;
-            -webkit-justify-content: space-evenly;
-            justify-content: space-evenly;
-            align-items: baseline;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(180px, 1fr));
+            grid-gap: 20px;
             .display-flex {
                 &.media {
+                    padding-top: 20px;
                     padding-bottom: 0;
                     justify-content: space-between;
+                    margin-top: auto;
                     .media-block {
                         a {
                             color: rgba(64, 74, 109, 0.50);
@@ -67,7 +68,6 @@
                 padding-right: 60px;
             }
             .blocks {
-                width: 300px;
                 border: 1px solid $color-light-blue;
                 -webkit-border-radius: 5px;
                 -moz-border-radius: 5px;
@@ -80,13 +80,17 @@
                 background-position-y: bottom;
                 background-repeat: no-repeat;
                 padding: 20px;
-                margin-bottom: 30px;
+                justify-content: start;
                 .info {
                     line-height: 24px;
                     cursor: pointer;
                 }
                 .more {
                     cursor: pointer;
+                    text-align: right;
+                    .learn-more {
+                        padding-top: 0;
+                    }
                 }
                 .team-less-more {
                     .learn-more {
@@ -98,9 +102,6 @@
                             vertical-align: unset;
                         }
                     }
-                }
-                .more {
-                    text-align: right;
                 }
                 .dots {
                     position: relative;
@@ -131,12 +132,15 @@
                             -webkit-border-radius: 50%;
                             -moz-border-radius: 50%;
                             border-radius: 50%;
+                            object-fit: cover;
+                            border: 3px solid $border-color;
                         }
                     }
                     .description {
                         display: inline-block;
                         margin-left: 20px;
                         margin-top: 10px;
+                        text-align: left;
                         p {
                             font-size: 14px;
                             color: rgba(64, 74, 109, 0.50);
