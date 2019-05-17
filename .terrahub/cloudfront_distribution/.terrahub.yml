@@ -7,14 +7,6 @@ component:
       backend:
         s3:
           key: terraform/mitocgroup/terrahub-www/cloudfront_distribution/terraform.tfstate
-    data:
-      terraform_remote_state:
-        s3_bucket:
-          backend: s3
-          config:
-            bucket: data-lake-terrahub-us-east-1
-            key: ${var.remote_state_key}
-            region: us-east-1
     resource:
       aws_cloudfront_distribution:
         cloudfront_distribution:
