@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.316.0",
+    "node-sass": "^4.12.0",
     "web-boost": "1.3.1"
   }
 }

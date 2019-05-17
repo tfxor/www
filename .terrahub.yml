@@ -1,23 +1,28 @@
 project:
-  name: 'TerraHub_Website'
-  code: '2ae8103c'
-  include: ['.terrahub']
-  exclude: ['**/.terraform']
+  name: TerraHub_Website
+  code: 2ae8103c
+  include: [.terrahub]
+  exclude: ['**/node_modules/**','**/.terraform/**','**/.git/**']
 
 template:
   locals:
-    region: 'us-east-1'
-    account_id: '123456789012'
+    region: us-east-1
+    account_id: 123456789012
+    remote_state_bucket: data-lake-terrahub-us-east-1
+    remote_state_backend: s3
+    remote_state_region: us-east-1
+    remote_state_workspace: ''
+    remote_state_project_path: terraform/mitocgroup/terrahub-www
   terraform:
     backend:
       s3:
-        bucket: 'data-lake-terrahub-us-east-1'
-        region: 'us-east-1'
-        workspace_key_prefix: 'terraform_workspaces'
+        bucket: data-lake-terrahub-us-east-1
+        region: us-east-1
+        workspace_key_prefix: terraform_workspaces
   provider:
     aws:
-      region: '${local.region}'
+      region: ${local.region}
       allowed_account_ids: ['${local.account_id}']
 
 terraform:
-  varFile: ['default.tfvars']
+  varFile: [default.tfvars]
