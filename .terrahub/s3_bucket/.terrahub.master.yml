@@ -1,12 +1,13 @@
+## master config
 component:
   template:
     tfvars:
-      s3_bucket_name: 'www.terrahub.io'
+      s3_bucket_name: www.terrahub.io
 
 build:
   env:
     variables:
-      THUB_ENV: 'master'
-      THUB_S3_PATH: 's3://www.terrahub.io'
-      THUB_ROBOTS: '../../robots.txt'
-      THUB_MAX_AGE: '31536000'
+      THUB_ENV: master
+      THUB_S3_PATH: s3://www.terrahub.io
+      THUB_ROBOTS: ../../robots.txt
+      THUB_MAX_AGE: 31536000
