@@ -4,19 +4,32 @@ set +x
 export NVM_DIR="/mnt/data/jenkins/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" > /dev/null
 
-nvm install 6.10.3
-nvm use 6.10.3
+nvm install 8.10.0
+nvm use 8.10.0
 
-export NODE_PATH=$(npm root -g)
+aws --version > /dev/null 2>&1 || { echo >&2 "aws is missing. aborting..."; exit 1; }
+npm --version > /dev/null 2>&1 || { echo >&2 "npm is missing. aborting..."; exit 1; }
+terrahub --version > /dev/null 2>&1 || { echo >&2 "terrahub is missing. aborting..."; exit 1; }
+git --version > /dev/null 2>&1 || { echo >&2 "git is missing. aborting..."; exit 1; }
+
+export NODE_PATH="$(npm root -g)"
+export npm_config_unsafe_perm="true"
+export DEBUG="debug"
+
 BRANCH_FROM="dev"
 BRANCH_TO="dev"
-if [ "${BRANCH_TO}" != "dev" ]; then
-  THUB_ENV="-e ${BRANCH_TO}"
-fi
+THUB_STATE="approved"
 
-echo '~~~~~'
-git branch
-git checkout ${BRANCH_TO}
-git checkout ${BRANCH_FROM}
+if [ -z "${BRANCH_FROM}" ]; then BRANCH_FROM="dev"; fi
+if [ -z "${BRANCH_TO}" ]; then BRANCH_TO="dev"; fi
+if [ "${BRANCH_TO}" != "dev" ]; then THUB_ENV="-e ${BRANCH_TO}"; fi
+if [ "${BRANCH_TO}" != "${BRANCH_FROM}" ]; then GIT_DIFF="-g ${BRANCH_TO}..${BRANCH_FROM}"; fi
+if [ "${THUB_STATE}" == "approved" ]; then THUB_APPLY="-a"; fi
 
-terrahub run -a -y ${THUB_ENV}
+git checkout $BRANCH_TO
+git checkout $BRANCH_FROM
+
+AWS_ACCOUNT_ID="$(aws sts get-caller-identity --output=text --query='Account')"
+terrahub configure -c template.locals.account_id="${AWS_ACCOUNT_ID}"
+
+terrahub run -y -b ${THUB_APPLY} ${THUB_ENV} ${GIT_DIFF}
