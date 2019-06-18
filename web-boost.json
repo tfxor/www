@@ -531,6 +531,7 @@
         "fb_type": "article",
         "tw_handle": "@TerraHubCorp",
         "tw_type": "summary_large_image"
+      }
     },
     "/blog/introducing-programmatic-aws-landing-zone-as-terraform-module/": {
       "view": "blog-post/introducing-programmatic-aws-landing-zone-as-terraform-module.twig",
