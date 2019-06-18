@@ -343,6 +343,14 @@
         "blogs": [
           {
             "featured": 0,
+            "date": "June 17th, 2019",
+            "image": "https://www.terrahub.io/img/blog/2019-06-17/aws-landing-zone.png",
+            "href": "https://www.terrahub.io/blog/introducing-programmatic-aws-landing-zone-as-terraform-module/",
+            "title": "Introducing Programmatic AWS Landing Zone as Terraform Module",
+            "description": "AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices."
+          },
+          {
+            "featured": 0,
             "date": "October 19th, 2018",
             "image": "https://www.terrahub.io/img/blog/2018-10-19/build-code-containers-python.png",
             "href": "https://www.terrahub.io/blog/terraform-for-serverless-series-enhanced-management-of-aws-fargate-tasks/",
