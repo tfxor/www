@@ -12,5 +12,4 @@ component:
 build:
   env:
     variables:
-      THUB_CLOUDFRONT_DOMAIN_NAME: www.terrahub.io.s3-website-us-east-1.amazonaws.com
       THUB_S3_BUCKET_NAME: www.terrahub.io

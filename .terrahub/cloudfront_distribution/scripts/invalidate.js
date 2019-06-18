@@ -1,49 +1,53 @@
-const AWS = require('aws-sdk')
+'use strict';
 
-const cloudfront = new AWS.CloudFront()
-const s3 = new AWS.S3()
-const {
-  THUB_CLOUDFRONT_DOMAIN_NAME: domainName,
-  THUB_S3_INDEX_KEY_CLOUDFRONT: cloudfrontIndex,
-  THUB_S3_INDEX_KEY_WEBSITE: websiteIndex,
-  THUB_S3_BUCKET_NAME: bucketName
-} = process.env
+const AWS = require('aws-sdk');
 
-function getDistributions () {
-  let marker
-  const result = []
-  const commonParams = {
-    MaxItems: '10'
-  }
+const cloudfront = new AWS.CloudFront();
+const { THUB_S3_BUCKET_NAME: bucketName } = process.env;
+
+/**
+ * Get all Cloudfront distributions
+ * @returns {Promise<{id: String, domainName: String, alias: []}[]>}
+ */
+function getDistributions() {
+  console.log('INFO: Checking if CloudFront distributions exist');
+
+  let marker;
+  const result = [];
+  const commonParams = { MaxItems: '10' };
 
   return new Promise(resolve => {
     const listDistributions = () => {
-      const params = marker ? Object.assign(commonParams, { Marker: marker }) : commonParams
-      let isTruncated, items
+      const params = marker ? Object.assign(commonParams, { Marker: marker }) : commonParams;
+      let isTruncated, items;
 
       cloudfront.listDistributions(params).promise().then(data => {
         const distributionList = data.DistributionList;
 
-        ({
-          NextMarker: marker,
-          IsTruncated: isTruncated,
-          Items: items
-        } = distributionList)
+        ({ NextMarker: marker, IsTruncated: isTruncated, Items: items } = distributionList);
 
-        result.push(...items)
+        items.map(distribution => {
+          distribution.Origins.Items.map(origin => {
+            result.push({ id: distribution.Id, domainName: origin.DomainName, alias: distribution.Aliases.Items });
+          });
+        });
 
         if (isTruncated) {
-          listDistributions()
+          listDistributions();
         }
 
-        resolve(result)
-      })
-    }
-    listDistributions()
-  })
+        resolve(result);
+      });
+    };
+    listDistributions();
+  });
 }
 
-function invalidateCloudfront (id) {
+/**
+ * @param {String} id
+ * @returns {Promise<{message: String, data: Object}>}
+ */
+async function invalidateCloudfront(id) {
   const params = {
     DistributionId: id,
     InvalidationBatch: {
@@ -53,81 +57,42 @@ function invalidateCloudfront (id) {
         Items: ['/*']
       }
     }
-  }
+  };
 
-  return new Promise(((resolve, reject) => {
-    cloudfront.createInvalidation(params).promise().then(res => {
-      resolve({ message: 'Invalidation created successfully', data: res })
-    }).catch(err => {
-      reject({ message: 'Invalidation could not be created successfully', data: err })
-    })
-  }))
-}
-
-function retrieveFileContent (bucket, key) {
-  const params = {
-    Bucket: bucket,
-    Key: key
-  }
-
-  return new Promise(resolve => {
-    s3.getObject(params).promise().then(data => {
-      resolve(data.Body.toString())
-    }).catch(() => {
-      resolve(false)
-    })
-  })
-}
-
-function writeFileContent (bucket, key, body) {
-  const params = {
-    Bucket: bucket,
-    Key: key,
-    Body: Buffer.from(body, 'utf-8')
-  }
-
-  s3.putObject(params).promise().catch(() => {
-    console.error(`ERROR: Unable to update ${key}... Aborting`)
-    process.exit()
-  })
-}
-
-function executeTrigger () {
-  console.log('INFO: Checking if CloudFront distribution exists')
-
-  getDistributions().then(data => {
-    return data.filter(it => it.Origins.Items.some(origin => origin.DomainName === domainName))
-  }).then(res => {
-    if (res.length === 0) {
-      console.error('ERROR: No CloudFront distribution was found... Aborting')
-
-      process.exit()
-    } else {
-      console.log('INFO: CloudFront distribution was found')
-
-      invalidateCloudfront(res[0].Id).then(console.log).catch(console.error)
-      retrieveFileContent(bucketName, websiteIndex).then(buildHash => {
-        writeFileContent(bucketName, cloudfrontIndex, buildHash)
-      })
-    }
-  })
-}
-
-retrieveFileContent(bucketName, cloudfrontIndex).then(content => {
-  if (content === false) {
-    console.log('INFO: CloudFront index file does not exist => Cache invalidation required')
-    executeTrigger()
-  } else {
-    retrieveFileContent(bucketName, websiteIndex).then(buildHash => {
-      console.log(`INFO: Build SHA256 => ${buildHash}`)
-      console.log(`INFO: CloudFront SHA256 => ${content}`)
-
-      if (buildHash === content) {
-        console.log('INFO: Cache invalidation is not required')
-      } else {
-        console.log('INFO: Cache invalidation is required')
-        executeTrigger()
+  try {
+    const res = await cloudfront.createInvalidation(params).promise();
+    const data = res.$response.data.Invalidation;
+    return {
+      message: `Invalidation was created successfully for ${id}`,
+      data: {
+        invalidationId: data.Id,
+        status: data.Status,
+        createTime: data.CreateTime
       }
-    })
+    };
+  } catch (err) {
+    return new Error(err);
   }
-})
+}
+
+getDistributions().then(distributions => {
+  const filtered = [];
+
+  distributions.map(distribution => {
+    if (distribution.domainName.includes(bucketName) || distribution.alias.includes(bucketName)) {
+      filtered.push(distribution);
+    }
+  });
+
+  if (!filtered.length) {
+    console.error('ERROR: No CloudFront distributions were found... Aborting');
+    process.exit(1);
+  }
+
+  filtered.map(distribution => {
+    invalidateCloudfront(distribution.id).then(result => {
+      console.log(result.message);
+      console.log(JSON.stringify(result.data));
+    });
+  });
+});
