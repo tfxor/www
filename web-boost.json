@@ -531,6 +531,22 @@
         "fb_type": "article",
         "tw_handle": "@TerraHubCorp",
         "tw_type": "summary_large_image"
+    },
+    "/blog/introducing-programmatic-aws-landing-zone-as-terraform-module/": {
+      "view": "blog-post/introducing-programmatic-aws-landing-zone-as-terraform-module.twig",
+      "vars": {
+        "author": "https://twitter.com/@eistrati",
+        "href": "https://www.terrahub.io/blog/introducing-programmatic-aws-landing-zone-as-terraform-module/",
+        "image": "https://www.terrahub.io/img/blog/2019-06-17/aws-landing-zone.png",
+        "title": "Introducing Programmatic AWS Landing Zone as Terraform Module",
+        "description": "Jun 17th, 2019 | 4 min read | AWS Landing Zone is a solution that helps customers more quickly set up a secure, multi-account AWS environment based on AWS best practices.",
+        "read_time": "4 min read",
+        "publisher": "https://www.facebook.com/TerraHubCorp",
+        "timestamp": "2019-06-17T12:34:56.789Z",
+        "fb_brand": "TerraHub",
+        "fb_type": "article",
+        "tw_handle": "@TerraHubCorp",
+        "tw_type": "summary_large_image"
       }
     }
   }
