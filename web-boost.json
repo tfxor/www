@@ -342,7 +342,7 @@
         "tw_type": "summary_large_image",
         "blogs": [
           {
-            "featured": 0,
+            "featured": 1,
             "date": "June 17th, 2019",
             "image": "https://www.terrahub.io/img/blog/2019-06-17/aws-landing-zone.png",
             "href": "https://www.terrahub.io/blog/introducing-programmatic-aws-landing-zone-as-terraform-module/",
@@ -366,7 +366,7 @@
             "description": "Last week I started working on a new series of stories focused on terraform for serverless. Today I would like to double down on this approach and describe in details how our team provisions and deploys Amazon S3 with website hosting feature for static web pages or single page applications."
           },
           {
-            "featured": 1,
+            "featured": 0,
             "date": "September 19th, 2018",
             "image": "https://www.terrahub.io/img/blog/2018-09-19/build-code-nodejs-javascript.png",
             "href": "https://www.terrahub.io/blog/terraform-for-serverless-series-enhanced-management-of-aws-lambda-functions/",
