@@ -1,12 +1,11 @@
+## test config
 component:
   template:
     tfvars:
-      s3_bucket_name: 'www-test.terrahub.io'
+      s3_bucket_name: www-test.terrahub.io
 
 build:
   env:
     variables:
-      THUB_ENV: 'test'
-      THUB_S3_PATH: 's3://www-test.terrahub.io'
-      THUB_ROBOTS: '../../robots.test.txt'
-      THUB_MAX_AGE: '600'
+      THUB_ENV: test
+      THUB_S3_PATH: s3://www-test.terrahub.io

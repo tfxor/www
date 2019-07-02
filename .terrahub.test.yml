@@ -1,2 +1,6 @@
+template:
+  locals:
+    remote_state_workspace: terraform_workspaces/test/
+
 terraform:
   varFile: ['default.tfvars', 'workspace/test.tfvars']

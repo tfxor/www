@@ -17,10 +17,6 @@ fi
 ## Check if the project must be built
 if [ "${THUB_BUILD_OK}" == "true" ]; then
   echo "THUB_BUILD_OK='${THUB_BUILD_OK}' ==> Starting build process."
-  CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-  cd ${CURRENT_DIR}/..
-  PREVIOUS_DIR=${OLDPWD}
-
   npm --version > /dev/null 2>&1 || { echo >&2 'ERROR: npm is missing. Aborting...'; exit 1; }
   npm config set depth 0 || { echo 'ERROR: Failed to run npm config'; exit 1; }
   npm install node-sass --unsafe-perm=true || { echo 'ERROR: Failed to run npm install node-sass -g'; exit 1; }
