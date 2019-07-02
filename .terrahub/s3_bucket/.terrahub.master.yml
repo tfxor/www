@@ -9,5 +9,5 @@ build:
     variables:
       THUB_ENV: master
       THUB_S3_PATH: s3://www.terrahub.io
-      THUB_ROBOTS: ../../robots.txt
+      THUB_ROBOTS: ../../robots.master.txt
       THUB_MAX_AGE: 31536000

@@ -66,7 +66,7 @@ build:
       THUB_ENV: dev
       THUB_INDEX_FILE: index.txt
       THUB_S3_PATH: s3://www-dev.terrahub.io
-      THUB_ROBOTS: ../../robots.dev.txt
+      THUB_ROBOTS: ../../robots.txt
       THUB_BUILD_PATH: ../../build
       THUB_SOURCE_PATH: ../../assets ../../static/fonts ../../static/img ../../views
       THUB_BUILD_OK: false

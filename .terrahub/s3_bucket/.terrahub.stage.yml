@@ -9,5 +9,4 @@ build:
     variables:
       THUB_ENV: stage
       THUB_S3_PATH: s3://www-stage.terrahub.io
-      THUB_ROBOTS: ../../robots.stage.txt
       THUB_MAX_AGE: 604800
