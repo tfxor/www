@@ -17,13 +17,16 @@ if [ "${BRANCH_TO}" != "dev" ]; then THUB_OPTS="${THUB_OPTS} -e ${BRANCH_TO}"; f
 if [ "${BRANCH_TO}" != "${BRANCH_FROM}" ]; then THUB_OPTS="${THUB_OPTS} -g ${BRANCH_TO}..${BRANCH_FROM}"; fi
 if [ "${THUB_STATE}" == "approve" ]; then THUB_OPTS="${THUB_OPTS} -a"; fi
 if [ "${THUB_STATE}" == "destroy" ]; then THUB_OPTS="${THUB_OPTS} -d"; fi
-if [ -z "${THUB_INCLUDE}" ]; then THUB_OPTS="${THUB_OPTS} -I \"^(${THUB_INCLUDE})\""; fi
-if [ -z "${THUB_EXCLUDE}" ]; then THUB_OPTS="${THUB_OPTS} -X \"^(${THUB_EXCLUDE})\""; fi
+if [ ! -z "${THUB_INCLUDE}" ]; then THUB_OPTS="${THUB_OPTS} -I \"^(${THUB_INCLUDE})\""; fi
+if [ ! -z "${THUB_EXCLUDE}" ]; then THUB_OPTS="${THUB_OPTS} -X \"^(${THUB_EXCLUDE})\""; fi
 
-git checkout $BRANCH_TO
-git checkout $BRANCH_FROM
+echo "git checkout ${BRANCH_TO}"
+git checkout ${BRANCH_TO}
+echo "git checkout ${BRANCH_FROM}"
+git checkout ${BRANCH_FROM}
 
 AWS_ACCOUNT_ID="$(aws sts get-caller-identity --output=text --query='Account')"
 terrahub configure -c template.locals.account_id="${AWS_ACCOUNT_ID}"
 
+echo "terrahub run -y ${THUB_OPTS}"
 terrahub run -y ${THUB_OPTS}
