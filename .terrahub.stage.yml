@@ -3,4 +3,4 @@ template:
     remote_state_workspace: terraform_workspaces/stage/
 
 terraform:
-  varFile: ['default.tfvars', 'workspace/stage.tfvars']
+  varFile: ['default.tfvars', 'stage.tfvars']
