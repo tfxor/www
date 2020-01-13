@@ -1,9 +1,12 @@
 project:
   name: TerraHub_Website
   code: 2ae8103c
-  include: [.terrahub]
-  exclude: ['**/node_modules/**','**/.terraform/**','**/.git/**']
-
+  include:
+    - .terrahub
+  exclude:
+    - '**/node_modules/**'
+    - '**/.terraform/**'
+    - '**/.git/**'
 template:
   locals:
     region: us-east-1
@@ -16,14 +19,17 @@ template:
   terraform:
     backend:
       s3:
+        key: >-
+          terraform/mitocgroup/terrahub-www/${tfvar.terrahub["component"]["name"]}/terraform.tfstate
+        workspace_key_prefix: terraform_workspaces
         bucket: data-lake-terrahub-us-east-1
         region: us-east-1
-        workspace_key_prefix: terraform_workspaces
   provider:
     aws:
-      region: ${local.region}
-      allowed_account_ids: ['${local.account_id}']
-
+      region: local.region
+      allowed_account_ids:
+        - local.account_id
 terraform:
-  varFile: [default.tfvars]
-  version: 0.11.13
+  varFile:
+    - default.tfvars
+  version: 0.12.19

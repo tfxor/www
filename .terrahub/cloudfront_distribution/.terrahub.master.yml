@@ -1,14 +1,9 @@
-## master config
 component:
   template:
     tfvars:
-      remote_state_key: terraform_workspaces/master/terraform/mitocgroup/terrahub-www/s3_bucket/terraform.tfstate
       aliases: [www.terrahub.io]
       comment: www.terrahub.io
-      origin_id: S3-Website-www.terrahub.io.s3-website-us-east-1.amazonaws.com
-      origin_name: www.terrahub.io.s3-website-us-east-1.amazonaws.com
 
-## build config
 build:
   env:
     variables:
