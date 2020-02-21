@@ -10,7 +10,7 @@ project:
 template:
   locals:
     region: us-east-1
-    account_id: 123456789012
+    account_id: 123456789000
     remote_state_bucket: data-lake-terrahub-us-east-1
     remote_state_backend: s3
     remote_state_region: us-east-1
@@ -32,4 +32,4 @@ template:
 terraform:
   varFile:
     - default.tfvars
-  version: 0.12.19
+  version: 0.12.21
