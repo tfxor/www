@@ -108,9 +108,6 @@ component:
           aws_cloudfront_distribution.cloudfront_distribution.in_progress_validation_batches
       caller_reference:
         value: aws_cloudfront_distribution.cloudfront_distribution.caller_reference
-      active_trusted_signers:
-        value: >-
-          aws_cloudfront_distribution.cloudfront_distribution.active_trusted_signers
 
 build:
   env:
