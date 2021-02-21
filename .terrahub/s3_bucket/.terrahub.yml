@@ -19,7 +19,6 @@ component:
         s3_bucket:
           bucket: var.s3_bucket_name
           acl: public-read
-          region: us-east-1
           force_destroy: true
           policy: data.aws_iam_policy_document.default_assume_s3_policy.json
           cors_rule!:
